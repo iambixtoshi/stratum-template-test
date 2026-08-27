@@ -29,6 +29,13 @@ REQUEST_DELAY = float(os.getenv("REQUEST_DELAY", "0.16"))
 PERIOD_FILTER = {x.strip() for x in os.getenv("AUDIT_PERIODS", "pre_change,post_change,current").split(",") if x.strip()}
 CACHE_PATH = Path(os.getenv("AUDIT_CACHE", "results/api_cache.json"))
 cache: dict[str, object] = {}
+KNOWN_SERVICE_ADDRESSES = {
+    "bc1qn2cpj0hrl37wqh5q94kwrlhtj2lx8ahtw7ef5rg35tswxsqtvufqfmmrq2": {
+        "entity": "OKX",
+        "label": "Hot Wallet_41442",
+        "source": "https://www.oklink.com/bitcoin/address/bc1qn2cpj0hrl37wqh5q94kwrlhtj2lx8ahtw7ef5rg35tswxsqtvufqfmmrq2/balance",
+    }
+}
 
 
 def utc_timestamp(value: str) -> int:
@@ -273,6 +280,11 @@ def compare(luxor_records: list[dict], antpool_records: list[dict]) -> dict:
     luxor, antpool = aggregate(luxor_records), aggregate(antpool_records)
     shared_txids = sorted(set(luxor["txids"]) & set(antpool["txids"]))
     shared_addresses = sorted(set(luxor["addresses"]) & set(antpool["addresses"]))
+    service_matches = [
+        {"address": address, **KNOWN_SERVICE_ADDRESSES[address]}
+        for address in shared_addresses if address in KNOWN_SERVICE_ADDRESSES
+    ]
+    unattributed_matches = [address for address in shared_addresses if address not in KNOWN_SERVICE_ADDRESSES]
     direct = []
     for record in luxor_records:
         if {"luxor", "antpool"}.issubset(set(record["direct_input_pool_labels"])):
@@ -287,6 +299,8 @@ def compare(luxor_records: list[dict], antpool_records: list[dict]) -> dict:
         "direct_mixed_coinbase_consolidations": direct,
         "shared_transaction_nodes": shared_txids,
         "shared_addresses_any_hop": shared_addresses,
+        "shared_known_service_addresses": service_matches,
+        "shared_unattributed_addresses": unattributed_matches,
         "shared_addresses_by_depth": depth_matches,
         "luxor_graph_counts": {"transactions": len(luxor["txids"]), "addresses": len(luxor["addresses"])},
         "antpool_graph_counts": {"transactions": len(antpool["txids"]), "addresses": len(antpool["addresses"])},
@@ -336,8 +350,19 @@ for name, period in result["periods"].items():
         f"- Direct mixed-pool consolidations: {len(comparison['direct_mixed_coinbase_consolidations'])}",
         f"- Shared transaction nodes: {len(comparison['shared_transaction_nodes'])}",
         f"- Shared addresses within five hops: {len(comparison['shared_addresses_any_hop'])}",
+        f"- Shared known exchange/service addresses: {len(comparison['shared_known_service_addresses'])}",
+        f"- Shared unattributed addresses: {len(comparison['shared_unattributed_addresses'])}",
         f"- API/trace errors: {len(period['errors'])}", "",
     ])
+    if comparison["shared_known_service_addresses"]:
+        summary.extend(["Known downstream services:", ""] + [
+            f"- `{item['address']}`: {item['entity']} {item['label']}"
+            for item in comparison["shared_known_service_addresses"]
+        ] + [""])
+    if comparison["shared_unattributed_addresses"]:
+        summary.extend(["Unattributed shared addresses requiring investigation:", ""] + [
+            f"- `{address}`" for address in comparison["shared_unattributed_addresses"]
+        ] + [""])
 Path("results/REWARD_CLUSTER_AUDIT.md").write_text("\n".join(summary) + "\n")
 save_cache()
 print(json.dumps({name: data["comparison"] for name, data in result["periods"].items()}, indent=2))

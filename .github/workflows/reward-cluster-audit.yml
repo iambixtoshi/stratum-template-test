@@ -47,9 +47,9 @@ jobs:
 
       - name: Run reward graph audit
         env:
-          AUDIT_PERIODS: ${{ github.event.inputs.periods || (github.event_name == 'push' && 'current') || 'pre_change,post_change,current' }}
-          LUXOR_LIMIT: ${{ github.event.inputs.luxor_limit || (github.event_name == 'push' && '6') || '25' }}
-          ANTPOOL_LIMIT: ${{ github.event.inputs.antpool_limit || (github.event_name == 'push' && '15') || '100' }}
+          AUDIT_PERIODS: ${{ github.event.inputs.periods || (github.event_name == 'push' && 'pre_change,post_change,current') || 'pre_change,post_change,current' }}
+          LUXOR_LIMIT: ${{ github.event.inputs.luxor_limit || (github.event_name == 'push' && '4') || '25' }}
+          ANTPOOL_LIMIT: ${{ github.event.inputs.antpool_limit || (github.event_name == 'push' && '10') || '100' }}
           MAX_HOPS: "5"
         run: python3 reward_cluster_audit.py
 
