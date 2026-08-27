@@ -22,6 +22,7 @@ USER_AGENT = "antpool-friends-reward-audit/2.0"
 MAX_HOPS = int(os.getenv("MAX_HOPS", "5"))
 MAX_RECURSIVE_OUTPUTS = int(os.getenv("MAX_RECURSIVE_OUTPUTS", "3"))
 FANOUT_STOP = int(os.getenv("FANOUT_STOP", "50"))
+PAYOUT_FANOUT = int(os.getenv("PAYOUT_FANOUT", "20"))
 MIN_VALUE_FRACTION = float(os.getenv("MIN_VALUE_FRACTION", "0.05"))
 LUXOR_LIMIT = int(os.getenv("LUXOR_LIMIT", "25"))
 ANTPOOL_LIMIT = int(os.getenv("ANTPOOL_LIMIT", "100"))
@@ -284,7 +285,32 @@ def compare(luxor_records: list[dict], antpool_records: list[dict]) -> dict:
         {"address": address, **KNOWN_SERVICE_ADDRESSES[address]}
         for address in shared_addresses if address in KNOWN_SERVICE_ADDRESSES
     ]
-    unattributed_matches = [address for address in shared_addresses if address not in KNOWN_SERVICE_ADDRESSES]
+    def contexts(records: list[dict]) -> dict[str, list[dict]]:
+        output = {}
+        for record in records:
+            for txid, node in record["graph"]["transactions"].items():
+                count = len(node.get("outputs", []))
+                for item in node.get("outputs", []):
+                    address = item.get("destination")
+                    if address:
+                        output.setdefault(address, []).append({
+                            "txid": txid, "hop": node["hop"], "output_count": count,
+                            "value": item.get("value"), "origin_height": record["height"],
+                        })
+        return output
+    luxor_context, antpool_context = contexts(luxor_records), contexts(antpool_records)
+    payout_matches = []
+    for address in shared_addresses:
+        if address in KNOWN_SERVICE_ADDRESSES:
+            continue
+        lctx, actx = luxor_context.get(address, []), antpool_context.get(address, [])
+        if any(item["output_count"] >= PAYOUT_FANOUT for item in lctx) and any(item["output_count"] >= PAYOUT_FANOUT for item in actx):
+            payout_matches.append({"address": address, "luxor_occurrences": lctx, "antpool_occurrences": actx})
+    payout_addresses = {item["address"] for item in payout_matches}
+    unattributed_matches = [
+        address for address in shared_addresses
+        if address not in KNOWN_SERVICE_ADDRESSES and address not in payout_addresses
+    ]
     direct = []
     for record in luxor_records:
         if {"luxor", "antpool"}.issubset(set(record["direct_input_pool_labels"])):
@@ -300,7 +326,8 @@ def compare(luxor_records: list[dict], antpool_records: list[dict]) -> dict:
         "shared_transaction_nodes": shared_txids,
         "shared_addresses_any_hop": shared_addresses,
         "shared_known_service_addresses": service_matches,
-        "shared_unattributed_addresses": unattributed_matches,
+        "shared_common_payout_recipients": payout_matches,
+        "shared_unattributed_treasury_candidates": unattributed_matches,
         "shared_addresses_by_depth": depth_matches,
         "luxor_graph_counts": {"transactions": len(luxor["txids"]), "addresses": len(luxor["addresses"])},
         "antpool_graph_counts": {"transactions": len(antpool["txids"]), "addresses": len(antpool["addresses"])},
@@ -314,6 +341,7 @@ result = {
     "method": {
         "max_hops": MAX_HOPS, "fanout_stop": FANOUT_STOP,
         "max_recursive_outputs": MAX_RECURSIVE_OUTPUTS, "min_value_fraction": MIN_VALUE_FRACTION,
+        "payout_fanout_threshold": PAYOUT_FANOUT,
         "maturity_cutoff": tip - 100,
     },
     "periods": {},
@@ -351,7 +379,8 @@ for name, period in result["periods"].items():
         f"- Shared transaction nodes: {len(comparison['shared_transaction_nodes'])}",
         f"- Shared addresses within five hops: {len(comparison['shared_addresses_any_hop'])}",
         f"- Shared known exchange/service addresses: {len(comparison['shared_known_service_addresses'])}",
-        f"- Shared unattributed addresses: {len(comparison['shared_unattributed_addresses'])}",
+        f"- Shared common payout-recipient candidates: {len(comparison['shared_common_payout_recipients'])}",
+        f"- Shared unattributed treasury candidates: {len(comparison['shared_unattributed_treasury_candidates'])}",
         f"- API/trace errors: {len(period['errors'])}", "",
     ])
     if comparison["shared_known_service_addresses"]:
@@ -359,9 +388,13 @@ for name, period in result["periods"].items():
             f"- `{item['address']}`: {item['entity']} {item['label']}"
             for item in comparison["shared_known_service_addresses"]
         ] + [""])
-    if comparison["shared_unattributed_addresses"]:
-        summary.extend(["Unattributed shared addresses requiring investigation:", ""] + [
-            f"- `{address}`" for address in comparison["shared_unattributed_addresses"]
+    if comparison["shared_common_payout_recipients"]:
+        summary.extend(["Common payout-recipient candidates:", ""] + [
+            f"- `{item['address']}`" for item in comparison["shared_common_payout_recipients"]
+        ] + [""])
+    if comparison["shared_unattributed_treasury_candidates"]:
+        summary.extend(["Unattributed treasury candidates requiring investigation:", ""] + [
+            f"- `{address}`" for address in comparison["shared_unattributed_treasury_candidates"]
         ] + [""])
 Path("results/REWARD_CLUSTER_AUDIT.md").write_text("\n".join(summary) + "\n")
 save_cache()

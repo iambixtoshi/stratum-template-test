@@ -48,4 +48,4 @@ The scheduled workflow then collects Luxor and AntPool jobs simultaneously and c
 
 A negative graph result does not prove separate ownership. Rotating deposit addresses, a common custodian assigning separate addresses, or convergence beyond the configured hop depth can hide an economic relationship.
 
-Likewise, convergence is not automatically proof of a shared treasury. Both pools may independently deposit to the same exchange, custodian, or payment service. The analyzer separates publicly attributed service addresses from unattributed shared addresses and preserves the paths for manual review.
+Likewise, convergence is not automatically proof of a shared treasury. Both pools may independently deposit to the same exchange or pay the same miner. The analyzer separates publicly attributed service addresses, common recipients appearing in payout fan-outs, and remaining unattributed treasury candidates. Exact paths remain available for manual review.
