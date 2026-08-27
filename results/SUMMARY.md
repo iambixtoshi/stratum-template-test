@@ -1,13 +1,13 @@
 # Luxor vs AntPool live Stratum comparison
 
-- Verdict: **INCONCLUSIVE: one or both endpoints supplied no observable jobs.**
-- Duration: 426.929 seconds
-- Luxor jobs: 0
+- Verdict: **PARTIAL/AMBIGUOUS SIMILARITY: longer sampling and branch-position analysis are required.**
+- Duration: 420.707 seconds
+- Luxor jobs: 1
 - AntPool jobs: 15
-- Paired comparisons: 0
-- Mean weighted similarity: None
-- Median weighted similarity: None
-- Similarity range: None to None
+- Paired comparisons: 1
+- Mean weighted similarity: 0.249755859375
+- Median weighted similarity: 0.249755859375
+- Similarity range: 0.249755859375 to 0.249755859375
 - Identical branch-list pairs: 0
 
 The score uses 0xB10C's published weighting, where later Merkle branches carry more weight.
@@ -18,9 +18,51 @@ This verdict applies only to the tested endpoints and observation window.
 ~~~json
 {
   "luxor": {
-    "responses": [],
+    "responses": [
+      {
+        "id": 1,
+        "result": [
+          [
+            [
+              "mining.notify",
+              "00"
+            ],
+            [
+              "mining.set_difficulty",
+              "00"
+            ]
+          ],
+          "00",
+          7
+        ],
+        "error": null
+      },
+      {
+        "id": null,
+        "method": "mining.set_difficulty",
+        "params": [
+          65536
+        ]
+      },
+      {
+        "id": 2,
+        "result": false,
+        "error": [
+          24,
+          "not authorized: publicobserver.worker",
+          null
+        ]
+      },
+      {
+        "id": null,
+        "method": "mining.set_difficulty",
+        "params": [
+          16384
+        ]
+      }
+    ],
     "errors": [
-      "gaierror: [Errno -2] Name or service not known"
+      "ConnectionResetError: [Errno 104] Connection reset by peer"
     ]
   },
   "antpool": {
@@ -32,14 +74,14 @@ This verdict applies only to the tested endpoints and observation window.
           [
             [
               "mining.notify",
-              "000013a91"
+              "000071c61"
             ],
             [
               "mining.set_difficulty",
-              "000013a92"
+              "000071c62"
             ]
           ],
-          "000013a9",
+          "000071c6",
           8
         ]
       },
