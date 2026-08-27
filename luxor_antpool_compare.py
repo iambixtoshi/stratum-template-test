@@ -12,8 +12,8 @@ DURATION = int(os.getenv("DURATION", "420"))
 PAIR_WINDOW = int(os.getenv("PAIR_WINDOW", "45"))
 POOLS = {
     "luxor": {
-        "host": "stratum.luxor.com",
-        "port": 3333,
+        "host": "btc.global.luxor.tech",
+        "port": 700,
         "user": os.getenv("LUXOR_USER", "publicobserver.worker"),
     },
     "antpool": {
