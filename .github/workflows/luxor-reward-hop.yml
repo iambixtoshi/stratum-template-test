@@ -1,0 +1,26 @@
+name: Live Luxor reward-hop audit
+
+on:
+  push:
+    branches:
+      - luxor-reward-hop-test
+  workflow_dispatch:
+
+jobs:
+  trace:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Trace mature coinbase rewards
+        run: python3 luxor_reward_hops.py
+      - name: Commit audit evidence
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add results/LUXOR_REWARD_HOPS.md results/luxor_reward_hops.json
+          git commit -m "Record Luxor reward-hop audit"
+          git push
