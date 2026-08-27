@@ -1,13 +1,13 @@
 # Luxor vs AntPool live Stratum comparison
 
-- Verdict: **PARTIAL/AMBIGUOUS SIMILARITY: longer sampling and branch-position analysis are required.**
-- Duration: 420.707 seconds
+- Verdict: **CONSISTENT WITH INDEPENDENT TEMPLATES during this observation window.**
+- Duration: 425.159 seconds
 - Luxor jobs: 1
 - AntPool jobs: 15
 - Paired comparisons: 1
-- Mean weighted similarity: 0.249755859375
-- Median weighted similarity: 0.249755859375
-- Similarity range: 0.249755859375 to 0.249755859375
+- Mean weighted similarity: 0.0623779296875
+- Median weighted similarity: 0.0623779296875
+- Similarity range: 0.0623779296875 to 0.0623779296875
 - Identical branch-list pairs: 0
 
 The score uses 0xB10C's published weighting, where later Merkle branches carry more weight.
@@ -19,6 +19,15 @@ This verdict applies only to the tested endpoints and observation window.
 {
   "luxor": {
     "responses": [
+      {
+        "id": 2,
+        "result": false,
+        "error": [
+          24,
+          "not authorized: publicobserver.worker",
+          null
+        ]
+      },
       {
         "id": 1,
         "result": [
@@ -45,15 +54,6 @@ This verdict applies only to the tested endpoints and observation window.
         ]
       },
       {
-        "id": 2,
-        "result": false,
-        "error": [
-          24,
-          "not authorized: publicobserver.worker",
-          null
-        ]
-      },
-      {
         "id": null,
         "method": "mining.set_difficulty",
         "params": [
@@ -74,14 +74,14 @@ This verdict applies only to the tested endpoints and observation window.
           [
             [
               "mining.notify",
-              "000071c61"
+              "00008a8a1"
             ],
             [
               "mining.set_difficulty",
-              "000071c62"
+              "00008a8a2"
             ]
           ],
-          "000071c6",
+          "00008a8a",
           8
         ]
       },
