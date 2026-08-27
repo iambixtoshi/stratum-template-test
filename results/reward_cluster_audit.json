@@ -1,10 +1,11 @@
 {
-  "generated_at": "2026-08-27T22:53:16.507335+00:00",
+  "generated_at": "2026-08-27T23:09:36.851355+00:00",
   "method": {
     "max_hops": 5,
     "fanout_stop": 50,
     "max_recursive_outputs": 3,
     "min_value_fraction": 0.05,
+    "payout_fanout_threshold": 20,
     "maturity_cutoff": 964257
   },
   "periods": {
@@ -32862,7 +32863,8 @@
           "bc1q0qfzuge7vr5s2xkczrjkccmxemlyyn8mhx298v"
         ],
         "shared_known_service_addresses": [],
-        "shared_unattributed_addresses": [
+        "shared_common_payout_recipients": [],
+        "shared_unattributed_treasury_candidates": [
           "3BHXygmhNMaCcNn76S8DLdnZ5ucPtNtWGb",
           "3BPAodH6WkNQC8TUrnwFKhETiFacNUi68X",
           "bc1q0qfzuge7vr5s2xkczrjkccmxemlyyn8mhx298v"
@@ -129508,12 +129510,167 @@
           "bc1qm34lsc65zpw79lxes69zkqmk6ee3ewf0j77s3h"
         ],
         "shared_known_service_addresses": [],
-        "shared_unattributed_addresses": [
+        "shared_common_payout_recipients": [
+          {
+            "address": "bc1qm34lsc65zpw79lxes69zkqmk6ee3ewf0j77s3h",
+            "luxor_occurrences": [
+              {
+                "txid": "235fc1abc1580cd18b2fcc35a3e4b79ec5ad432b9aa107e1377963a95220e24c",
+                "hop": 3,
+                "output_count": 1,
+                "value": 2648323999,
+                "origin_height": 820226
+              },
+              {
+                "txid": "03cf4298e5c435fafae84f264a7284edb4d26a244c61735aa01600cb8b1e1474",
+                "hop": 4,
+                "output_count": 23,
+                "value": 58006859,
+                "origin_height": 820226
+              },
+              {
+                "txid": "93a96e39da05824600d873c09e10b1f1b25162d1f49338b2ec8d55677d8c3ea3",
+                "hop": 3,
+                "output_count": 1,
+                "value": 8447033126,
+                "origin_height": 825000
+              },
+              {
+                "txid": "4bfd5be6517920bbb61923f0a1c1e54e69ea3403b1b0a62cfd236d38795e4142",
+                "hop": 4,
+                "output_count": 12,
+                "value": 302517937,
+                "origin_height": 825000
+              },
+              {
+                "txid": "1467e991f596604b27e461211bc8cb0f522111180c62509d1e30f679282dbbbc",
+                "hop": 3,
+                "output_count": 1,
+                "value": 2895514390,
+                "origin_height": 829140
+              },
+              {
+                "txid": "614eb82ea671b416e25e52750ab3cc2e1a3d837802c572ff742607fc73bb2c5e",
+                "hop": 4,
+                "output_count": 22,
+                "value": 86960951,
+                "origin_height": 829140
+              },
+              {
+                "txid": "bb888aa1430794f4936658e09ad41e4990aea2bb096552047a2be72acc898786",
+                "hop": 4,
+                "output_count": 1,
+                "value": 3707596270,
+                "origin_height": 829140
+              },
+              {
+                "txid": "f38959220dcbab4dd47bcfeb97be4d298b6926cef95d01a5a20f0ac4c575f7e7",
+                "hop": 5,
+                "output_count": 39,
+                "value": 22979797,
+                "origin_height": 829140
+              },
+              {
+                "txid": "8b02d938796f18beefcce967fb44403c14aae4a3772e9370c17b94c85d616d4a",
+                "hop": 4,
+                "output_count": 2,
+                "value": 12827861530,
+                "origin_height": 829140
+              },
+              {
+                "txid": "8b02d938796f18beefcce967fb44403c14aae4a3772e9370c17b94c85d616d4a",
+                "hop": 4,
+                "output_count": 2,
+                "value": 1640,
+                "origin_height": 829140
+              },
+              {
+                "txid": "1ca54a6df69034da6b714d33e87f3cb564f78808ff10fb1119f8b93704057e82",
+                "hop": 5,
+                "output_count": 13,
+                "value": 2871975174,
+                "origin_height": 829140
+              },
+              {
+                "txid": "67360b3e6f7932b762aa7708ca082a659f440eccc8e65bbbf9b751868b2589c5",
+                "hop": 5,
+                "output_count": 1,
+                "value": 1035187446,
+                "origin_height": 829140
+              },
+              {
+                "txid": "389c82d9539d82199468ea87107875e7c6bce36433bf9c1d601885fb02e61fd8",
+                "hop": 3,
+                "output_count": 1,
+                "value": 4608059935,
+                "origin_height": 833580
+              },
+              {
+                "txid": "10f6a70ec99a25582d1e5bafdd96d274729526e79313a7871eb53392eeee72ba",
+                "hop": 4,
+                "output_count": 25,
+                "value": 307671030,
+                "origin_height": 833580
+              },
+              {
+                "txid": "15fc87d820a6dad7f92e31c39c5c10f3ab30d63eacd2768533a2ce6712444f3f",
+                "hop": 5,
+                "output_count": 24,
+                "value": 98436993,
+                "origin_height": 833580
+              },
+              {
+                "txid": "b159fd2c5cbdf37c4b3036467002238e1e4bbc6e9ed2286e7cd014951849eea7",
+                "hop": 4,
+                "output_count": 1,
+                "value": 3259721701,
+                "origin_height": 833580
+              },
+              {
+                "txid": "d686a83199529896d20aa134fd686aea4d73b548fc0d7f483aec6c5a63e2b3dc",
+                "hop": 5,
+                "output_count": 16,
+                "value": 331608273,
+                "origin_height": 833580
+              }
+            ],
+            "antpool_occurrences": [
+              {
+                "txid": "4f3775373901dd6fda97a285a5278591643a45a297a306d4e8ecf889b9916144",
+                "hop": 2,
+                "output_count": 1,
+                "value": 8639007154,
+                "origin_height": 833652
+              },
+              {
+                "txid": "bf32b1748d6e26a9ecf4a4c9a7d059f14e312de3ca5472d5bb1fc3387d0b0f47",
+                "hop": 3,
+                "output_count": 28,
+                "value": 807565054,
+                "origin_height": 833652
+              },
+              {
+                "txid": "ce00c4245c441a6b19e403aa99b82ba365aa478045e0b98d4ce7ddbd149e4d39",
+                "hop": 4,
+                "output_count": 40,
+                "value": 508583672,
+                "origin_height": 833652
+              },
+              {
+                "txid": "62cfffaf7a1a39ac9bf8c2e3765c725e782ad26ddf7a8f25a5308f42dcb61822",
+                "hop": 5,
+                "output_count": 27,
+                "value": 201486917,
+                "origin_height": 833652
+              }
+            ]
+          }
+        ],
+        "shared_unattributed_treasury_candidates": [
           "1P8hzUnQn1VYbDwsGkNmbiHXLJWS6v9JEs",
           "3BHXygmhNMaCcNn76S8DLdnZ5ucPtNtWGb",
           "3BPAodH6WkNQC8TUrnwFKhETiFacNUi68X",
-          "bc1q0qfzuge7vr5s2xkczrjkccmxemlyyn8mhx298v",
-          "bc1qm34lsc65zpw79lxes69zkqmk6ee3ewf0j77s3h"
+          "bc1q0qfzuge7vr5s2xkczrjkccmxemlyyn8mhx298v"
         ],
         "shared_addresses_by_depth": [
           {
@@ -167344,9 +167501,51 @@
           "16RLWRvYY1Bdn2QhUGW7hjKcmkeK4ToNRa"
         ],
         "shared_known_service_addresses": [],
-        "shared_unattributed_addresses": [
-          "16RLWRvYY1Bdn2QhUGW7hjKcmkeK4ToNRa"
+        "shared_common_payout_recipients": [
+          {
+            "address": "16RLWRvYY1Bdn2QhUGW7hjKcmkeK4ToNRa",
+            "luxor_occurrences": [
+              {
+                "txid": "ea2b80022facf42cb9e98e11bdd32b46c59efcbe541e53d827a763d0f7fbefb6",
+                "hop": 3,
+                "output_count": 35,
+                "value": 334250808,
+                "origin_height": 955354
+              }
+            ],
+            "antpool_occurrences": [
+              {
+                "txid": "ad96c40e3c3bac21839af1be0b5ead3e0ade7f1c34de09654a987ad5539a17da",
+                "hop": 2,
+                "output_count": 501,
+                "value": 18060852,
+                "origin_height": 951488
+              },
+              {
+                "txid": "5f600839060f14de6e86172240907e39166959e6ffa0a5acc1401747dac4eeca",
+                "hop": 3,
+                "output_count": 501,
+                "value": 17443631,
+                "origin_height": 952928
+              },
+              {
+                "txid": "1d04e9aa0ba915f6b8579b75971a39a41b5d73294840bfa62f8a6bfd618787dc",
+                "hop": 3,
+                "output_count": 501,
+                "value": 17507695,
+                "origin_height": 955665
+              },
+              {
+                "txid": "ddbfa8464b8d7cfc35e37969f05df4ca9e144dcce492aa97ad6e69d8df3f2da8",
+                "hop": 3,
+                "output_count": 501,
+                "value": 659636,
+                "origin_height": 957109
+              }
+            ]
+          }
         ],
+        "shared_unattributed_treasury_candidates": [],
         "shared_addresses_by_depth": [
           {
             "luxor_hop": 3,
