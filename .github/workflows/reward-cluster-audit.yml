@@ -1,0 +1,70 @@
+name: Reward cluster audit
+
+on:
+  workflow_dispatch:
+    inputs:
+      periods:
+        description: Comma-separated periods
+        required: false
+        default: pre_change,post_change,current
+      luxor_limit:
+        description: Luxor coinbases per period
+        required: false
+        default: "25"
+      antpool_limit:
+        description: AntPool coinbases per period
+        required: false
+        default: "100"
+  push:
+    branches: [antpool-friends-audit]
+    paths:
+      - reward_cluster_audit.py
+      - .github/workflows/reward-cluster-audit.yml
+  schedule:
+    - cron: "17 4 * * 1"
+
+concurrency:
+  group: reward-cluster-audit
+  cancel-in-progress: false
+
+jobs:
+  audit:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Restore API cache
+        uses: actions/cache/restore@v4
+        with:
+          path: results/api_cache.json
+          key: reward-api-${{ github.ref_name }}-${{ github.run_id }}
+          restore-keys: |
+            reward-api-${{ github.ref_name }}-
+
+      - name: Run reward graph audit
+        env:
+          AUDIT_PERIODS: ${{ github.event.inputs.periods || (github.event_name == 'push' && 'current') || 'pre_change,post_change,current' }}
+          LUXOR_LIMIT: ${{ github.event.inputs.luxor_limit || (github.event_name == 'push' && '6') || '25' }}
+          ANTPOOL_LIMIT: ${{ github.event.inputs.antpool_limit || (github.event_name == 'push' && '15') || '100' }}
+          MAX_HOPS: "5"
+        run: python3 reward_cluster_audit.py
+
+      - name: Save API cache
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: results/api_cache.json
+          key: reward-api-${{ github.ref_name }}-${{ github.run_id }}
+
+      - name: Commit evidence
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add results/REWARD_CLUSTER_AUDIT.md results/reward_cluster_audit.json
+          git diff --cached --quiet && exit 0
+          git commit -m "Record reward-cluster audit"
+          git push
