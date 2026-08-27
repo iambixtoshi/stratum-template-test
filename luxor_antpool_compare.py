@@ -47,83 +47,91 @@ def weighted_similarity(a, b):
 
 
 def listen(name, cfg):
-    sock = None
-    try:
-        sock = socket.create_connection((cfg["host"], cfg["port"]), timeout=20)
-        sock.settimeout(10)
-        subscribe = {
-            "id": 1,
-            "method": "mining.subscribe",
-            "params": ["public-template-observer/1.0"],
-        }
-        authorize = {
-            "id": 2,
-            "method": "mining.authorize",
-            "params": [cfg["user"], "x"],
-        }
-        sock.sendall((json.dumps(subscribe) + "\n").encode())
-        sock.sendall((json.dumps(authorize) + "\n").encode())
+    deadline = time.time() + DURATION
+    while time.time() < deadline:
+        sock = None
+        try:
+            remaining = max(1, deadline - time.time())
+            sock = socket.create_connection(
+                (cfg["host"], cfg["port"]), timeout=min(20, remaining)
+            )
+            sock.settimeout(10)
+            subscribe = {
+                "id": 1,
+                "method": "mining.subscribe",
+                "params": ["public-template-observer/1.0"],
+            }
+            authorize = {
+                "id": 2,
+                "method": "mining.authorize",
+                "params": [cfg["user"], "x"],
+            }
+            sock.sendall((json.dumps(subscribe) + "\n").encode())
+            sock.sendall((json.dumps(authorize) + "\n").encode())
 
-        buffer = b""
-        deadline = time.time() + DURATION
-        while time.time() < deadline:
-            try:
-                chunk = sock.recv(65536)
-            except socket.timeout:
-                continue
-            if not chunk:
-                diagnostics[name]["errors"].append("server closed connection")
-                break
-            buffer += chunk
-            while b"\n" in buffer:
-                line, buffer = buffer.split(b"\n", 1)
-                if not line:
-                    continue
+            buffer = b""
+            while time.time() < deadline:
                 try:
-                    message = json.loads(line.decode(errors="replace"))
-                except Exception as exc:
-                    diagnostics[name]["errors"].append(f"JSON decode: {exc}")
+                    chunk = sock.recv(65536)
+                except socket.timeout:
                     continue
+                if not chunk:
+                    diagnostics[name]["errors"].append("server closed connection")
+                    break
+                buffer += chunk
+                while b"\n" in buffer:
+                    line, buffer = buffer.split(b"\n", 1)
+                    if not line:
+                        continue
+                    try:
+                        message = json.loads(line.decode(errors="replace"))
+                    except Exception as exc:
+                        diagnostics[name]["errors"].append(f"JSON decode: {exc}")
+                        continue
 
-                if message.get("method") != "mining.notify":
-                    diagnostics[name]["responses"].append(message)
-                    continue
+                    if message.get("method") != "mining.notify":
+                        diagnostics[name]["responses"].append(message)
+                        continue
 
-                params = message.get("params", [])
-                if len(params) < 9:
-                    diagnostics[name]["errors"].append(
-                        f"short mining.notify params: {len(params)}"
+                    params = message.get("params", [])
+                    if len(params) < 9:
+                        diagnostics[name]["errors"].append(
+                            f"short mining.notify params: {len(params)}"
+                        )
+                        continue
+
+                    job = {
+                        "captured_at": time.time(),
+                        "job_id": params[0],
+                        "prev_hash": params[1],
+                        "coinbase1": params[2],
+                        "coinbase2": params[3],
+                        "merkle_branches": params[4],
+                        "version": params[5],
+                        "nbits": params[6],
+                        "ntime": params[7],
+                        "clean_jobs": params[8],
+                        "coinbase_printable": printable_hex(params[2], params[3]),
+                    }
+                    with lock:
+                        jobs[name].append(job)
+                    print(
+                        f"{name}: job={job['job_id']} branches={len(job['merkle_branches'])} "
+                        f"prev={job['prev_hash'][-12:]} tag={job['coinbase_printable'][:100]}",
+                        flush=True,
                     )
-                    continue
+        except Exception as exc:
+            diagnostics[name]["errors"].append(f"{type(exc).__name__}: {exc}")
+        finally:
+            if sock is not None:
+                try:
+                    sock.close()
+                except Exception:
+                    pass
 
-                job = {
-                    "captured_at": time.time(),
-                    "job_id": params[0],
-                    "prev_hash": params[1],
-                    "coinbase1": params[2],
-                    "coinbase2": params[3],
-                    "merkle_branches": params[4],
-                    "version": params[5],
-                    "nbits": params[6],
-                    "ntime": params[7],
-                    "clean_jobs": params[8],
-                    "coinbase_printable": printable_hex(params[2], params[3]),
-                }
-                with lock:
-                    jobs[name].append(job)
-                print(
-                    f"{name}: job={job['job_id']} branches={len(job['merkle_branches'])} "
-                    f"prev={job['prev_hash'][-12:]} tag={job['coinbase_printable'][:100]}",
-                    flush=True,
-                )
-    except Exception as exc:
-        diagnostics[name]["errors"].append(f"{type(exc).__name__}: {exc}")
-    finally:
-        if sock is not None:
-            try:
-                sock.close()
-            except Exception:
-                pass
+        remaining = deadline - time.time()
+        if remaining > 0:
+            time.sleep(min(30, remaining))
 
 
 threads = [
