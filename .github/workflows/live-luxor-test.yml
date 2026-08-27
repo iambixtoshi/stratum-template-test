@@ -1,0 +1,32 @@
+name: Live Luxor template comparison
+
+on:
+  push:
+    branches:
+      - luxor-live-test
+  workflow_dispatch:
+
+jobs:
+  compare:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    steps:
+      - name: Check out test branch
+        uses: actions/checkout@v4
+
+      - name: Capture and compare live jobs
+        env:
+          DURATION: "420"
+          PAIR_WINDOW: "45"
+        run: python3 luxor_antpool_compare.py
+
+      - name: Commit results to test branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add results/SUMMARY.md results/stratum_comparison.json
+          git commit -m "Record live Luxor Stratum comparison results"
+          git push
