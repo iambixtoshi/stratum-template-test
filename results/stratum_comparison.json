@@ -1,0 +1,1265 @@
+{
+  "summary": {
+    "started_at_unix": 1787865968.7907488,
+    "finished_at_unix": 1787866392.2374125,
+    "duration_seconds": 423.447,
+    "endpoints": {
+      "braiins": "stratum.braiins.com:3333",
+      "antpool": "btc.antpool.com:3333"
+    },
+    "job_counts": {
+      "braiins": 16,
+      "antpool": 15
+    },
+    "paired_comparisons": 16,
+    "mean_weighted_similarity": 0.005645751953125,
+    "median_weighted_similarity": 0.0035400390625,
+    "minimum_weighted_similarity": 0.000732421875,
+    "maximum_weighted_similarity": 0.015380859375,
+    "identical_template_pairs": 0,
+    "diagnostics": {
+      "braiins": {
+        "responses": [
+          {
+            "id": 1,
+            "result": [
+              [
+                [
+                  "mining.set_difficulty",
+                  "1"
+                ],
+                [
+                  "mining.notify",
+                  "1"
+                ]
+              ],
+              "",
+              6
+            ],
+            "error": null
+          },
+          {
+            "id": 2,
+            "result": false,
+            "error": null
+          },
+          {
+            "id": null,
+            "method": "mining.set_difficulty",
+            "params": [
+              8192
+            ]
+          },
+          {
+            "id": null,
+            "method": "mining.set_difficulty",
+            "params": [
+              2048
+            ]
+          },
+          {
+            "id": null,
+            "method": "mining.set_difficulty",
+            "params": [
+              1024
+            ]
+          }
+        ],
+        "errors": []
+      },
+      "antpool": {
+        "responses": [
+          {
+            "error": null,
+            "id": 1,
+            "result": [
+              [
+                [
+                  "mining.notify",
+                  "0000fca21"
+                ],
+                [
+                  "mining.set_difficulty",
+                  "0000fca22"
+                ]
+              ],
+              "0000fca2",
+              8
+            ]
+          },
+          {
+            "error": null,
+            "id": 2,
+            "result": true
+          },
+          {
+            "id": null,
+            "method": "mining.set_difficulty",
+            "params": [
+              65536
+            ]
+          },
+          {
+            "id": null,
+            "method": "mining.set_difficulty",
+            "params": [
+              16384
+            ]
+          }
+        ],
+        "errors": []
+      }
+    },
+    "verdict": "CONSISTENT WITH INDEPENDENT TEMPLATES during this observation window."
+  },
+  "pairs": [
+    {
+      "time_delta_seconds": 0.327,
+      "prev_hash": "0982b4a52b8e71ac24b70ffa854e4e3469f16e550000827b0000000000000000",
+      "braiins_job_id": "00",
+      "antpool_job_id": "3776272",
+      "braiins_branch_count": 13,
+      "antpool_branch_count": 13,
+      "matching_positions_zero_indexed": [
+        0,
+        2,
+        3,
+        4
+      ],
+      "matching_branch_count": 4,
+      "weighted_similarity": 0.0035400390625,
+      "identical_branch_lists": false,
+      "braiins_coinbase_printable": ".........................................!.....e....6K...g8rg./slush/..............v..|.N..Y`.=&.........A..........&j$.!...}j...nV...;...w..C\"*...cc>..[.6....",
+      "antpool_coinbase_printable": ".........................................V.....Mined by AntPool ..d..x.z..mmT..S..j........lE.a.......s7.................\"..........B@*(.a.q.K'.r.y.[....!..........RI...1.9.....................&j$.!..F$z........4.h..hi .a<...`............../j-CORE.)SU..... .......=..7N>..,....KT..2+....0.........j.E"
+    },
+    {
+      "time_delta_seconds": 3.349,
+      "prev_hash": "0982b4a52b8e71ac24b70ffa854e4e3469f16e550000827b0000000000000000",
+      "braiins_job_id": "01",
+      "antpool_job_id": "3776272",
+      "braiins_branch_count": 13,
+      "antpool_branch_count": 13,
+      "matching_positions_zero_indexed": [
+        0,
+        2,
+        3
+      ],
+      "matching_branch_count": 3,
+      "weighted_similarity": 0.0015869140625,
+      "identical_branch_lists": false,
+      "braiins_coinbase_printable": ".........................................!.....e....6K...R.vg./slush/..............v..|.N..Y`.=&.........A..........&j$.!.....&T...<..wgI.C....w.y.H...G.......",
+      "antpool_coinbase_printable": ".........................................V.....Mined by AntPool ..d..x.z..mmT..S..j........lE.a.......s7.................\"..........B@*(.a.q.K'.r.y.[....!..........RI...1.9.....................&j$.!..F$z........4.h..hi .a<...`............../j-CORE.)SU..... .......=..7N>..,....KT..2+....0.........j.E"
+    },
+    {
+      "time_delta_seconds": 5.472,
+      "prev_hash": "0982b4a52b8e71ac24b70ffa854e4e3469f16e550000827b0000000000000000",
+      "braiins_job_id": "02",
+      "antpool_job_id": "3776276",
+      "braiins_branch_count": 13,
+      "antpool_branch_count": 13,
+      "matching_positions_zero_indexed": [
+        0,
+        2,
+        3,
+        4
+      ],
+      "matching_branch_count": 4,
+      "weighted_similarity": 0.0035400390625,
+      "identical_branch_lists": false,
+      "braiins_coinbase_printable": ".........................................!.....e....6K...c`{g./slush/......a.......v..|.N..Y`.=&.........A..........&j$.!..5z.,.......CQ..>^{..,N...X..a.......",
+      "antpool_coinbase_printable": ".........................................V.....Mined by AntPool ..d.......mmZ$%.V.......9........%....... ...............\"..........B@*(.a.q.K'.r.y.[....U..........RI...1.9.....................&j$.!.....?2.%...:.n...f.<..cu6q9..>..h......../j-CORE.)SU..... .......=..7N>..,....KT..2+....0.........j.E"
+    },
+    {
+      "time_delta_seconds": 5.531,
+      "prev_hash": "0982b4a52b8e71ac24b70ffa854e4e3469f16e550000827b0000000000000000",
+      "braiins_job_id": "03",
+      "antpool_job_id": "3776281",
+      "braiins_branch_count": 13,
+      "antpool_branch_count": 13,
+      "matching_positions_zero_indexed": [
+        0,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "matching_branch_count": 6,
+      "weighted_similarity": 0.0152587890625,
+      "identical_branch_lists": false,
+      "braiins_coinbase_printable": ".........................................!.....e....6K..._..g./slush/......,.......v..|.N..Y`.=&.........A..........&j$.!..\"E..{...G,...e.B....{4.b.z..FM......",
+      "antpool_coinbase_printable": ".........................................V.....Mined by AntPool ..d.......mm....k.y/Vo....>.8.A.kl...n@..................\"..........B@*(.a.q.K'.r.y.[.....w.........RI...1.9.....................&j$.!....?.=c...h.Hyu..N9D.An...2..o.........../j-CORE.)SU..... .......=..7N>..,....KT..2+....0.........j.E"
+    },
+    {
+      "time_delta_seconds": 5.569,
+      "prev_hash": "0982b4a52b8e71ac24b70ffa854e4e3469f16e550000827b0000000000000000",
+      "braiins_job_id": "04",
+      "antpool_job_id": "3776284",
+      "braiins_branch_count": 13,
+      "antpool_branch_count": 13,
+      "matching_positions_zero_indexed": [
+        1,
+        2,
+        3
+      ],
+      "matching_branch_count": 3,
+      "weighted_similarity": 0.001708984375,
+      "identical_branch_lists": false,
+      "braiins_coinbase_printable": ".........................................!.....e....6K......g./slush/..............v..|.N..Y`.=&.........A..........&j$.!........I.......e.....&.....3..\\4/....",
+      "antpool_coinbase_printable": ".........................................V.....Mined by AntPool ..d..0.?..mm$.d...Te.k`..t.W.R;...y.Q..!.ga..............\"..........B@*(.a.q.K'.r.y.[....A-.........RI...1.9.....................&j$.!....xI.8...[PdU4....e.{`$Qh...*.SH......../j-CORE.)SU..... .......=..7N>..,....KT..2+....0.........j.E"
+    },
+    {
+      "time_delta_seconds": 6.121,
+      "prev_hash": "0982b4a52b8e71ac24b70ffa854e4e3469f16e550000827b0000000000000000",
+      "braiins_job_id": "05",
+      "antpool_job_id": "3776288",
+      "braiins_branch_count": 13,
+      "antpool_branch_count": 13,
+      "matching_positions_zero_indexed": [
+        1,
+        2,
+        3
+      ],
+      "matching_branch_count": 3,
+      "weighted_similarity": 0.001708984375,
+      "identical_branch_lists": false,
+      "braiins_coinbase_printable": ".........................................!.....e....6K......g./slush/.....;........v..|.N..Y`.=&.........A..........&j$.!..e....aN...:....jV......e..a....H....",
+      "antpool_coinbase_printable": ".........................................V.....Mined by AntPool ..d..^U...mmW......c.*....{m.g.LRR\\....,...c.............\"..........B@*(.a.q.K'.r.y.[....Z..........RI...1.9.....................&j$.!.....Us4......C$}..=.]......L..4.0......../j-CORE.)SU..... .......=..7N>..,....KT..2+....0.........j.E"
+    },
+    {
+      "time_delta_seconds": 6.315,
+      "prev_hash": "0982b4a52b8e71ac24b70ffa854e4e3469f16e550000827b0000000000000000",
+      "braiins_job_id": "06",
+      "antpool_job_id": "3776290",
+      "braiins_branch_count": 13,
+      "antpool_branch_count": 13,
+      "matching_positions_zero_indexed": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "matching_branch_count": 4,
+      "weighted_similarity": 0.003662109375,
+      "identical_branch_lists": false,
+      "braiins_coinbase_printable": ".........................................!.....e....6K......g./slush/......;.......v..|.N..Y`.=&.........A..........&j$.!.. m.&. ..b..jF .Wf...&....J.L..w.....",
+      "antpool_coinbase_printable": ".........................................V.....Mined by AntPool ..d...{...mm..K........r.............Z...kbI.............\"..........B@*(.a.q.K'.r.y.[...............RI...1.9.....................&j$.!..d.b__.G-.&*...P3_..-.yc.o.............../j-CORE.)SU..... .......=..7N>..,....KT..2+....0.........j.E"
+    },
+    {
+      "time_delta_seconds": 6.634,
+      "prev_hash": "0982b4a52b8e71ac24b70ffa854e4e3469f16e550000827b0000000000000000",
+      "braiins_job_id": "07",
+      "antpool_job_id": "3776293",
+      "braiins_branch_count": 13,
+      "antpool_branch_count": 13,
+      "matching_positions_zero_indexed": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "matching_branch_count": 5,
+      "weighted_similarity": 0.007568359375,
+      "identical_branch_lists": false,
+      "braiins_coinbase_printable": ".........................................!.....e....6K....C.g./slush/..............v..|.N..Y`.=&.........A..........&j$.!...YT.k...+.q..t.x0.f..q.......Hb.....",
+      "antpool_coinbase_printable": ".........................................V.....Mined by AntPool ..d...d...mmJD....r.%[....i..t.Y...../bC}................\"..........B@*(.a.q.K'.r.y.[.....E.........RI...1.9.....................&j$.!..t..\\.]z......Gh.'.>;B.....l#.m`........./j-CORE.)SU..... .......=..7N>..,....KT..2+....0.........j.E"
+    },
+    {
+      "time_delta_seconds": 6.659,
+      "prev_hash": "0982b4a52b8e71ac24b70ffa854e4e3469f16e550000827b0000000000000000",
+      "braiins_job_id": "08",
+      "antpool_job_id": "3776296",
+      "braiins_branch_count": 13,
+      "antpool_branch_count": 13,
+      "matching_positions_zero_indexed": [
+        1,
+        2,
+        3
+      ],
+      "matching_branch_count": 3,
+      "weighted_similarity": 0.001708984375,
+      "identical_branch_lists": false,
+      "braiins_coinbase_printable": ".........................................!.....e....6K...|..g./slush/......j.......v..|.N..Y`.=&.........A..........&j$.!..U..x........i....\\.6...@...36._.....",
+      "antpool_coinbase_printable": ".........................................V.....Mined by AntPool ..d...<,..mm.H/.......O.kR...E.7...N.-<b.................\"..........B@*(.a.q.K'.r.y.[...............RI...1.9.....................&j$.!.... j&.....B...dV.Cv.%%..!..H[.........../j-CORE.)SU..... .......=..7N>..,....KT..2+....0.........j.E"
+    },
+    {
+      "time_delta_seconds": 6.476,
+      "prev_hash": "0982b4a52b8e71ac24b70ffa854e4e3469f16e550000827b0000000000000000",
+      "braiins_job_id": "09",
+      "antpool_job_id": "3776299",
+      "braiins_branch_count": 13,
+      "antpool_branch_count": 13,
+      "matching_positions_zero_indexed": [
+        1,
+        2,
+        3
+      ],
+      "matching_branch_count": 3,
+      "weighted_similarity": 0.001708984375,
+      "identical_branch_lists": false,
+      "braiins_coinbase_printable": ".........................................!.....e....6K...qk.g./slush/..............v..|.N..Y`.=&.........A..........&j$.!..=.Wd?.&...!.-+....-.;:.R....F,.2....",
+      "antpool_coinbase_printable": ".........................................V.....Mined by AntPool ..d.......mm..]...#.9.;.*\"..&...R.e...b..................\"..........B@*(.a.q.K'.r.y.[....Yq.........RI...1.9.....................&j$.!..........].[...)t..2.R3.;..r.WF5........./j-CORE.)SU..... .......=..7N>..,....KT..2+....0.........j.E"
+    },
+    {
+      "time_delta_seconds": 6.865,
+      "prev_hash": "0982b4a52b8e71ac24b70ffa854e4e3469f16e550000827b0000000000000000",
+      "braiins_job_id": "0a",
+      "antpool_job_id": "3776301",
+      "braiins_branch_count": 13,
+      "antpool_branch_count": 13,
+      "matching_positions_zero_indexed": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "matching_branch_count": 5,
+      "weighted_similarity": 0.007568359375,
+      "identical_branch_lists": false,
+      "braiins_coinbase_printable": ".........................................!.....e....6K...K..g./slush/..............v..|.N..Y`.=&.........A..........&j$.!....4|...R.N.PS....I......jb....4V....",
+      "antpool_coinbase_printable": ".........................................V.....Mined by AntPool ..d..D....mm.Q.-..<d......F<b........KK...c..............\"..........B@*(.a.q.K'.r.y.[.....[.........RI...1.9.....................&j$.!....c....Pb..tF.......,...x..!d.q........./j-CORE.)SU..... .......=..7N>..,....KT..2+....0.........j.E"
+    },
+    {
+      "time_delta_seconds": 6.862,
+      "prev_hash": "0982b4a52b8e71ac24b70ffa854e4e3469f16e550000827b0000000000000000",
+      "braiins_job_id": "0b",
+      "antpool_job_id": "3776303",
+      "braiins_branch_count": 13,
+      "antpool_branch_count": 13,
+      "matching_positions_zero_indexed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "matching_branch_count": 6,
+      "weighted_similarity": 0.015380859375,
+      "identical_branch_lists": false,
+      "braiins_coinbase_printable": ".........................................!.....e....6K...u..g./slush/.....>........v..|.N..Y`.=&.........A..........&j$.!..p5...m.dj..zb..+..pp.h........]b....",
+      "antpool_coinbase_printable": ".........................................V.....Mined by AntPool ..d..r6...mm.......:.k.Q|M.D..1.iY..A.u...\\..............\"..........B@*(.a.q.K'.r.y.[...............RI...1.9.....................&j$.!...z..G......9...`...W.......F!.v........./j-CORE.)SU..... .......=..7N>..,....KT..2+....0.........j.E"
+    },
+    {
+      "time_delta_seconds": 6.939,
+      "prev_hash": "0982b4a52b8e71ac24b70ffa854e4e3469f16e550000827b0000000000000000",
+      "braiins_job_id": "0c",
+      "antpool_job_id": "3776306",
+      "braiins_branch_count": 13,
+      "antpool_branch_count": 13,
+      "matching_positions_zero_indexed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "matching_branch_count": 6,
+      "weighted_similarity": 0.015380859375,
+      "identical_branch_lists": false,
+      "braiins_coinbase_printable": ".........................................!.....e....6K.../'.g./slush/...... .......v..|.N..Y`.=&.........A..........&j$.!......\\C7>)..G.T.L<.........5F.E......",
+      "antpool_coinbase_printable": ".........................................V.....Mined by AntPool ..d....i..mm........|kwV../..F.P.....:{..2.i.............\"..........B@*(.a.q.K'.r.y.[....z..........RI...1.9.....................&j$.!.....b.~.|7F.._VO...uSn.HS..>....1......../j-CORE.)SU..... .......=..7N>..,....KT..2+....0.........j.E"
+    },
+    {
+      "time_delta_seconds": 7.202,
+      "prev_hash": "0982b4a52b8e71ac24b70ffa854e4e3469f16e550000827b0000000000000000",
+      "braiins_job_id": "0d",
+      "antpool_job_id": "3776312",
+      "braiins_branch_count": 13,
+      "antpool_branch_count": 13,
+      "matching_positions_zero_indexed": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "matching_branch_count": 5,
+      "weighted_similarity": 0.007568359375,
+      "identical_branch_lists": false,
+      "braiins_coinbase_printable": ".........................................!.....e....6K......g./slush/......j.......v..|.N..Y`.=&.........A..........&j$.!..5...<.qo.W.!N.>y..B..N...~...~......",
+      "antpool_coinbase_printable": ".........................................V.....Mined by AntPool ..d.......mmUKK........s.<-...%!......{...'..............\"..........B@*(.a.q.K'.r.y.[...............RI...1.9.....................&j$.!..'#Z.S....:.t..1E.#w.......J7............/j-CORE.)SU..... .......=..7N>..,....KT..2+....0.........j.E"
+    },
+    {
+      "time_delta_seconds": 7.204,
+      "prev_hash": "0982b4a52b8e71ac24b70ffa854e4e3469f16e550000827b0000000000000000",
+      "braiins_job_id": "0e",
+      "antpool_job_id": "3776315",
+      "braiins_branch_count": 13,
+      "antpool_branch_count": 13,
+      "matching_positions_zero_indexed": [
+        1,
+        2,
+        3
+      ],
+      "matching_branch_count": 3,
+      "weighted_similarity": 0.001708984375,
+      "identical_branch_lists": false,
+      "braiins_coinbase_printable": ".........................................!.....e....6K....O.g./slush/..............v..|.N..Y`.=&.........A..........&j$.!..v'...`.[........uWG*...5.O.F..1.....",
+      "antpool_coinbase_printable": ".........................................V.....Mined by AntPool ..d... A..mm.\\....j^.^.}h6;..q...Z...r....`..............\"..........B@*(.a.q.K'.r.y.[....&..........RI...1.9.....................&j$.!...5.T.O..~.E.....:.....X.=.I^b5=........./j-CORE.)SU..... .......=..7N>..,....KT..2+....0.........j.E"
+    },
+    {
+      "time_delta_seconds": 22.787,
+      "prev_hash": "0982b4a52b8e71ac24b70ffa854e4e3469f16e550000827b0000000000000000",
+      "braiins_job_id": "0f",
+      "antpool_job_id": "3776315",
+      "braiins_branch_count": 13,
+      "antpool_branch_count": 13,
+      "matching_positions_zero_indexed": [
+        1,
+        2
+      ],
+      "matching_branch_count": 2,
+      "weighted_similarity": 0.000732421875,
+      "identical_branch_lists": false,
+      "braiins_coinbase_printable": ".........................................!.....e....6K......g./slush/.....Q;.......v..|.N..Y`.=&.........A..........&j$.!.. \".q.s./....E......H../7...u^rn.....",
+      "antpool_coinbase_printable": ".........................................V.....Mined by AntPool ..d... A..mm.\\....j^.^.}h6;..q...Z...r....`..............\"..........B@*(.a.q.K'.r.y.[....&..........RI...1.9.....................&j$.!...5.T.O..~.E.....:.....X.=.I^b5=........./j-CORE.)SU..... .......=..7N>..,....KT..2+....0.........j.E"
+    }
+  ],
+  "jobs": {
+    "braiins": [
+      {
+        "captured_at": 1787865969.4023633,
+        "job_id": "00",
+        "prev_hash": "0982b4a52b8e71ac24b70ffa854e4e3469f16e550000827b0000000000000000",
+        "coinbase1": "01000000010000000000000000000000000000000000000000000000000000000000000000ffffffff210305b70e03650600008d364b000000",
+        "coinbase2": "67387267042f736c7573682f0000000002a8feba12000000001976a9147c154ed1dc59609e3d26abb2df2ea3d587cd8c4188ac0000000000000000266a24aa21a9edfc7d6aa3bae26e5680859c3b02a62e77b30743222a9fd2dc63633e1dfc5b003600000000",
+        "merkle_branches": [
+          "10114aaad1b51274c6a8cc0507ada6b0dea2952961db1f8869bfc53b3018c49d",
+          "554a2c831d51ecff6eeab570ad139ab4db708d5a19a677f15f586e88ce3adcdc",
+          "b186dddaad8941b664ce00b8c1f35f2ade5cb25408305789e504cbfbdc1dc51c",
+          "02204905e4a7c53e1d9251e69a77a2ecdd055ad07e69d373c0d5a9414a2e0b3e",
+          "1bc94df07be16c29f45221731642a78aa62fad6a030b58272abc4bd1662186df",
+          "e02bf90fb9f1ed5f37f3b20b0527224a6a5e554a5a976ced6236e13cd7e4eb85",
+          "33ddbb90817cf7396c50ec590d27f419990855f36bf1fca3440bfe230a5c1d5f",
+          "3467852243d76e9eeeea97b466e23a7e5759289b42f784e04996c6c580a0fd1e",
+          "b4e9d06714f9521204109d8fd347f1614ed02279aa33c73099b6a24ff71fa8e9",
+          "cc4f6df5fd45afc41fb3ebb0e286bc20e0cde5b55383130b035f6de459394d1a",
+          "9f859ea77e8519cdda63365120e4f3d83b2f140c1a0a031370586932e4cba38a",
+          "eb1605f7930bacc2233db997b724f56dd244b0ca9cb4b9a147da6983d022dc0f",
+          "c835a0ab053c23ee2c13a8096bbf59f16058b592a4c44a7baaf42f7dcef6af5d"
+        ],
+        "version": "20000000",
+        "nbits": "17023cc1",
+        "ntime": "6a90ab54",
+        "clean_jobs": true,
+        "coinbase_printable": ".........................................!.....e....6K...g8rg./slush/..............v..|.N..Y`.=&.........A..........&j$.!...}j...nV...;...w..C\"*...cc>..[.6...."
+      },
+      {
+        "captured_at": 1787865972.4240365,
+        "job_id": "01",
+        "prev_hash": "0982b4a52b8e71ac24b70ffa854e4e3469f16e550000827b0000000000000000",
+        "coinbase1": "01000000010000000000000000000000000000000000000000000000000000000000000000ffffffff210305b70e03650600008d364b000000",
+        "coinbase2": "52cc7667042f736c7573682f0000000002d206bc12000000001976a9147c154ed1dc59609e3d26abb2df2ea3d587cd8c4188ac0000000000000000266a24aa21a9edb2cb032654ac9de23cfaaa776749df43120f1916770a79f548bf8bf8477ff2af00000000",
+        "merkle_branches": [
+          "10114aaad1b51274c6a8cc0507ada6b0dea2952961db1f8869bfc53b3018c49d",
+          "f284f3a8cce0d83cd1e9df94f532d13beea0595c35f66f2466a10831161b0951",
+          "b186dddaad8941b664ce00b8c1f35f2ade5cb25408305789e504cbfbdc1dc51c",
+          "02204905e4a7c53e1d9251e69a77a2ecdd055ad07e69d373c0d5a9414a2e0b3e",
+          "30aa2b3014e19b400c89ea22a3b7743e48f47e618c9f22a6f21dd5448fddcf2a",
+          "9c8618db9c88f8a1b7d70d64e2719f00855af4ef1159d77c9ba079029d1a5eea",
+          "71cd95b5d40fcb3f99a1fc6aabef4eb0f3afbf99505fe34cdb7283c5d933c669",
+          "5c570a495291790c4342780bf093e1075ed2413adbd54d13fa7806ae3f3a7de9",
+          "9a7a7a5d4e608dea8eef2a7bf2ccccb6c78cc08679dd0ebe3858ef994ba60ee3",
+          "f9b3fec94bf44000ed75b61f642c8246fa09fba514e250aa41caf7cafad98a9c",
+          "e80ca4097cf553f67b1d9d7131452312987cb567d5f61a87ec9ddcbaae284b89",
+          "1a56d1b930c0c90b6f1cd2304500c50f1c3a3c659d495127aa085e747e68b639",
+          "add873a2e26b16c43df1a0a040aa279b0fac7bd2dcacc6fe266bd8f3781e632f"
+        ],
+        "version": "20000000",
+        "nbits": "17023cc1",
+        "ntime": "6a90ab72",
+        "clean_jobs": false,
+        "coinbase_printable": ".........................................!.....e....6K...R.vg./slush/..............v..|.N..Y`.=&.........A..........&j$.!.....&T...<..wgI.C....w.y.H...G......."
+      },
+      {
+        "captured_at": 1787866002.1644025,
+        "job_id": "02",
+        "prev_hash": "0982b4a52b8e71ac24b70ffa854e4e3469f16e550000827b0000000000000000",
+        "coinbase1": "01000000010000000000000000000000000000000000000000000000000000000000000000ffffffff210305b70e03650600008d364b000000",
+        "coinbase2": "63607b67042f736c7573682f0000000002d561bc12000000001976a9147c154ed1dc59609e3d26abb2df2ea3d587cd8c4188ac0000000000000000266a24aa21a9ed357a8d2c92a700090aeb954351f7823e5e7b1e972c4efda3e958ac9261bee0b400000000",
+        "merkle_branches": [
+          "10114aaad1b51274c6a8cc0507ada6b0dea2952961db1f8869bfc53b3018c49d",
+          "85550b04738614e182240f138f5058be695a908ab2946f900899e6e00ffd66bd",
+          "b186dddaad8941b664ce00b8c1f35f2ade5cb25408305789e504cbfbdc1dc51c",
+          "02204905e4a7c53e1d9251e69a77a2ecdd055ad07e69d373c0d5a9414a2e0b3e",
+          "30aa2b3014e19b400c89ea22a3b7743e48f47e618c9f22a6f21dd5448fddcf2a",
+          "9c8618db9c88f8a1b7d70d64e2719f00855af4ef1159d77c9ba079029d1a5eea",
+          "8c6a98868a456cc5434d6c4f70564c720ada7ef40e7812fda1123ddacd856b63",
+          "a24fa92bc231811174a77037c61196ba2bfd24ea1abb624c49af4bbd9cf7848c",
+          "755bbd8d89cfdd915f7d434bd0b1b9ebc3dfc6b92414fa15a47054de77004d9b",
+          "1a45fe081cb9e32d6ad11afbb384785b5e9471b54b19548e00136ca10afdf027",
+          "fe938a66c5c522bc427d3d82bc4ce9da97052cddec36ef16c79151d900d84be3",
+          "9945f32ef2950834aa39dff9d4a2600afc1ea238e6d811dd32066a5b1d5a765b",
+          "eb76269eb830c4d504113c214f10bc1a244241984df1216a4ff41b13c82d5d61"
+        ],
+        "version": "20000000",
+        "nbits": "17023cc1",
+        "ntime": "6a90ab90",
+        "clean_jobs": false,
+        "coinbase_printable": ".........................................!.....e....6K...c`{g./slush/......a.......v..|.N..Y`.=&.........A..........&j$.!..5z.,.......CQ..>^{..,N...X..a......."
+      },
+      {
+        "captured_at": 1787866032.256229,
+        "job_id": "03",
+        "prev_hash": "0982b4a52b8e71ac24b70ffa854e4e3469f16e550000827b0000000000000000",
+        "coinbase1": "01000000010000000000000000000000000000000000000000000000000000000000000000ffffffff210305b70e03650600008d364b000000",
+        "coinbase2": "5ff47f67042f736c7573682f00000000029a2cbd12000000001976a9147c154ed1dc59609e3d26abb2df2ea3d587cd8c4188ac0000000000000000266a24aa21a9ed2245a3dd7baffa04472cb7010865e442168d90fa7b348e628c7ac4ee464d98ce00000000",
+        "merkle_branches": [
+          "10114aaad1b51274c6a8cc0507ada6b0dea2952961db1f8869bfc53b3018c49d",
+          "6d2b17109ce6585ac0283ff6c4a4f01b34c8739fa13b8766e0a8ad6002458313",
+          "b186dddaad8941b664ce00b8c1f35f2ade5cb25408305789e504cbfbdc1dc51c",
+          "02204905e4a7c53e1d9251e69a77a2ecdd055ad07e69d373c0d5a9414a2e0b3e",
+          "30aa2b3014e19b400c89ea22a3b7743e48f47e618c9f22a6f21dd5448fddcf2a",
+          "2644c3c8e46adb44b4fb4630698c4eedf66c4921ae4215ce3cee7556a0f812be",
+          "b3c21b500be7f892894973264aee1310d17bd9457b4ca2447085ecf76ae0b478",
+          "24848304cf6d35b5df0c3b19928a0656c67364d3473c9db73fe9a63c597f8a52",
+          "9d0e6ceb2e6cb503904a11332d314387ca3d4d82286684cf6c8d73b1d895805b",
+          "cf705760c0d4dae685099c74cbd31a9f767655637715d8d89a1e8363de198875",
+          "51cf462bcdc835c3a870dbb5e815f15d90b6a581902d82bc12d2e59b472f0939",
+          "1ee5ab3afe2aad09d5e39fc048748f5b13d675c6a781f196d8ffd921059af189",
+          "0729582327ebf1fbe23747e7ba3370db414ad94641919e5f88c289d51cb7bb30"
+        ],
+        "version": "20000000",
+        "nbits": "17023cc1",
+        "ntime": "6a90abae",
+        "clean_jobs": false,
+        "coinbase_printable": ".........................................!.....e....6K..._..g./slush/......,.......v..|.N..Y`.=&.........A..........&j$.!..\"E..{...G,...e.B....{4.b.z..FM......"
+      },
+      {
+        "captured_at": 1787866062.4119773,
+        "job_id": "04",
+        "prev_hash": "0982b4a52b8e71ac24b70ffa854e4e3469f16e550000827b0000000000000000",
+        "coinbase1": "01000000010000000000000000000000000000000000000000000000000000000000000000ffffffff210305b70e03650600008d364b000000",
+        "coinbase2": "7f888467042f736c7573682f00000000029ed3bd12000000001976a9147c154ed1dc59609e3d26abb2df2ea3d587cd8c4188ac0000000000000000266a24aa21a9ede5aa0811a0f84915f0ecb3efbdb065088507f4d326cdf5beb49833e2855c342f00000000",
+        "merkle_branches": [
+          "ba41dbfc01b4ab795a9121dc9555ae88b5ef276a6611051a19c2f0bc0e2a9c02",
+          "15d06d835792134991074a3ea30ed3c95a64a36cbc96695a8ca27b84426a0972",
+          "b186dddaad8941b664ce00b8c1f35f2ade5cb25408305789e504cbfbdc1dc51c",
+          "02204905e4a7c53e1d9251e69a77a2ecdd055ad07e69d373c0d5a9414a2e0b3e",
+          "30aa2b3014e19b400c89ea22a3b7743e48f47e618c9f22a6f21dd5448fddcf2a",
+          "2644c3c8e46adb44b4fb4630698c4eedf66c4921ae4215ce3cee7556a0f812be",
+          "404d4229b7b2a778f547306a1993b0b015cf0b42f2d0d98da2ae09d34d50e896",
+          "d378a746f6430f5cac9b3769303afbf2b764319480dbad978b5b2620fc2b65b9",
+          "0c38eed76695b3bd4945a98cdc69238103111a55e5043607975839d4e2cc1044",
+          "4ea364693b4151b280749d4eda29889391144fb7cd5103fec7fd7f8c0c218de1",
+          "21fc57da60af668802a66d747aaf2309d50d59074dca2e7e7e2a980169c568a1",
+          "1a9e76f15c4b6fede75963eb4889e452559819c2d6067ba12549e98d3821ba9c",
+          "3ad483e8570534a72522f0f3cb302458d0b167aaf19f8b22eb2772ebb47bfd18"
+        ],
+        "version": "20000000",
+        "nbits": "17023cc1",
+        "ntime": "6a90abcc",
+        "clean_jobs": false,
+        "coinbase_printable": ".........................................!.....e....6K......g./slush/..............v..|.N..Y`.=&.........A..........&j$.!........I.......e.....&.....3..\\4/...."
+      },
+      {
+        "captured_at": 1787866092.1607547,
+        "job_id": "05",
+        "prev_hash": "0982b4a52b8e71ac24b70ffa854e4e3469f16e550000827b0000000000000000",
+        "coinbase1": "01000000010000000000000000000000000000000000000000000000000000000000000000ffffffff210305b70e03650600008d364b000000",
+        "coinbase2": "c61b8967042f736c7573682f00000000023bd6be12000000001976a9147c154ed1dc59609e3d26abb2df2ea3d587cd8c4188ac0000000000000000266a24aa21a9ed65d9cea4fd614ea5a90a3af909f48b6a5685a8e1c0acba65c41261d5be00d74800000000",
+        "merkle_branches": [
+          "63b19721bc08c8f7d3ea154641d5bd0d3e6b7911d59bbf37d4eca7676aca7d44",
+          "15d06d835792134991074a3ea30ed3c95a64a36cbc96695a8ca27b84426a0972",
+          "b186dddaad8941b664ce00b8c1f35f2ade5cb25408305789e504cbfbdc1dc51c",
+          "02204905e4a7c53e1d9251e69a77a2ecdd055ad07e69d373c0d5a9414a2e0b3e",
+          "a6d81a322ceea7ad48ed1be75122a5fc9d9621120740dc7392598b1b563d1f53",
+          "6655b619d020e8ea6038113c76a032c714692d448b245858caf0398380642cb5",
+          "1511c56098b10a4b81fd53e62eac0f8b1a48204017559c1ebed2c7e2ad731c96",
+          "9b40be14b6866534009223cd44a65b38dee15c0a2456093bc76e467718fc9c7d",
+          "bf73b7011b9f1dd48ebe8202a942181872b6279c14e2a3184e663f5a7ec29731",
+          "35501635e64e88cef2b54dcbce70b639eb010f4aaad4fbc298483935263d82f4",
+          "996d0a4b643f136c9949133e4757e8d3a04e30ebc1b784d6e48388ced589154d",
+          "d08aed75de2966e9a06c33bd6a2681ed2379ff1ec530446abc29be3a9aa8b6c9",
+          "194cd3df3fee762440b3fea20a66f301fa5aefd80c164be2fd6dfbef02e348d3"
+        ],
+        "version": "20000000",
+        "nbits": "17023cc1",
+        "ntime": "6a90abea",
+        "clean_jobs": false,
+        "coinbase_printable": ".........................................!.....e....6K......g./slush/.....;........v..|.N..Y`.=&.........A..........&j$.!..e....aN...:....jV......e..a....H...."
+      },
+      {
+        "captured_at": 1787866122.2109993,
+        "job_id": "06",
+        "prev_hash": "0982b4a52b8e71ac24b70ffa854e4e3469f16e550000827b0000000000000000",
+        "coinbase1": "01000000010000000000000000000000000000000000000000000000000000000000000000ffffffff210305b70e03650600008d364b000000",
+        "coinbase2": "aeaf8d67042f736c7573682f00000000029a3bbf12000000001976a9147c154ed1dc59609e3d26abb2df2ea3d587cd8c4188ac0000000000000000266a24aa21a9ed206dc4260d20e413628ff46a46207f5766031ae5267f8803b94ae74cf8f977d400000000",
+        "merkle_branches": [
+          "8e9a2309adc4d53c6e3e2debe07f7f1d0cfb1f5b6de34a9b2bd6f040166c5838",
+          "15d06d835792134991074a3ea30ed3c95a64a36cbc96695a8ca27b84426a0972",
+          "b186dddaad8941b664ce00b8c1f35f2ade5cb25408305789e504cbfbdc1dc51c",
+          "02204905e4a7c53e1d9251e69a77a2ecdd055ad07e69d373c0d5a9414a2e0b3e",
+          "d79f0a6f240038a0a01f00d69a366354f5c54bd1d52513e22854cc6cfc3465fb",
+          "263301ce3b3cb41cbc5bbe975f3d80ac5509a68fb871837a42314ec218be473a",
+          "0bc51f68179ccc0d2562710d155406879d39d660ba259696ff3dcb9975be347e",
+          "d92163d01b701ae175d9a2f5efd5c8589116554622f4eb0a8da3a00d52a509bc",
+          "057bee10869aa6eca2c22ddab72d80578f02303441b2a850e84508956c8ab9c8",
+          "00400c0990c2a68955dfe5ba65429f5094c448966129bec42f54df3c379c6b14",
+          "b2a4ea6d660920a79d0dff3a4c0d62ce3abe451b4d0003daf456a4fbe5e3d361",
+          "04371929830907e7593fd466461affe3c098a94eed9364a330565cf0d1fda502",
+          "5e9f9ff60a6031cfdfc2b120dac6fb06b7e6703213e01001b20f6f8c32e02dde"
+        ],
+        "version": "20000000",
+        "nbits": "17023cc1",
+        "ntime": "6a90ac08",
+        "clean_jobs": false,
+        "coinbase_printable": ".........................................!.....e....6K......g./slush/......;.......v..|.N..Y`.=&.........A..........&j$.!.. m.&. ..b..jF .Wf...&....J.L..w....."
+      },
+      {
+        "captured_at": 1787866151.98366,
+        "job_id": "07",
+        "prev_hash": "0982b4a52b8e71ac24b70ffa854e4e3469f16e550000827b0000000000000000",
+        "coinbase1": "01000000010000000000000000000000000000000000000000000000000000000000000000ffffffff210305b70e03650600008d364b000000",
+        "coinbase2": "c3439267042f736c7573682f0000000002b011c012000000001976a9147c154ed1dc59609e3d26abb2df2ea3d587cd8c4188ac0000000000000000266a24aa21a9ed9c5954806b0803c12be57197ca749e7830ba6699e371b6fdf2edbc80844862b900000000",
+        "merkle_branches": [
+          "38721a748b150df78ab36aeb0536b3946b00077d02b5853dec803584261b2dd7",
+          "15d06d835792134991074a3ea30ed3c95a64a36cbc96695a8ca27b84426a0972",
+          "b186dddaad8941b664ce00b8c1f35f2ade5cb25408305789e504cbfbdc1dc51c",
+          "02204905e4a7c53e1d9251e69a77a2ecdd055ad07e69d373c0d5a9414a2e0b3e",
+          "d79f0a6f240038a0a01f00d69a366354f5c54bd1d52513e22854cc6cfc3465fb",
+          "fae360738a7c4130a17d41ddf5d97f54aaf9518d6ce591c7bfbeb8098aca2cb3",
+          "12da9c670d9d110edaa9256acfeb3dc149f55f3fa1763ec6e0e9f870d6059fa3",
+          "27a0ddc02fc79e2fa294bab2923ec1ff8b323ba9d8019f09422ac5c2c2558e04",
+          "8171571ee515094a0b88c494523285f9543d78c46fe6018e7602414724383f0e",
+          "0c053c4da504f4f19b9a50d5eeadea7672050265e86a39ad050c4ba76e58cf03",
+          "78042564eb5a9cc1f79d00f4ab48b47d7292fee9271c8483d27ae26c51ca2ac2",
+          "719b921299b078756ae266f966079d6c49b06d0a9901f7432a97b2f86f80d45f",
+          "ed3437da7a87da8c0a75a63156d2f9bbec9c7c21f26fe5ee5ed1ef59adaef1c8"
+        ],
+        "version": "20000000",
+        "nbits": "17023cc1",
+        "ntime": "6a90ac26",
+        "clean_jobs": false,
+        "coinbase_printable": ".........................................!.....e....6K....C.g./slush/..............v..|.N..Y`.=&.........A..........&j$.!...YT.k...+.q..t.x0.f..q.......Hb....."
+      },
+      {
+        "captured_at": 1787866182.0068395,
+        "job_id": "08",
+        "prev_hash": "0982b4a52b8e71ac24b70ffa854e4e3469f16e550000827b0000000000000000",
+        "coinbase1": "01000000010000000000000000000000000000000000000000000000000000000000000000ffffffff210305b70e03650600008d364b000000",
+        "coinbase2": "7cd79667042f736c7573682f0000000002bd6ac012000000001976a9147c154ed1dc59609e3d26abb2df2ea3d587cd8c4188ac0000000000000000266a24aa21a9ed55cf177804f4baced6e80e0769f6d901b05ce436bdedca40b1a4a633369b5f8200000000",
+        "merkle_branches": [
+          "176d4e159b2b2e45d82bc9f2879137ff45cd2783d9d6b3370417b7ae3b8942f8",
+          "15d06d835792134991074a3ea30ed3c95a64a36cbc96695a8ca27b84426a0972",
+          "b186dddaad8941b664ce00b8c1f35f2ade5cb25408305789e504cbfbdc1dc51c",
+          "02204905e4a7c53e1d9251e69a77a2ecdd055ad07e69d373c0d5a9414a2e0b3e",
+          "d79f0a6f240038a0a01f00d69a366354f5c54bd1d52513e22854cc6cfc3465fb",
+          "fae360738a7c4130a17d41ddf5d97f54aaf9518d6ce591c7bfbeb8098aca2cb3",
+          "beaa95a6f8b76b1996446caf2f4c1e3fed40e638519c58c5ca39d06048262f3b",
+          "64f3f73c7a6dc0daa0029024d6a7ae288b1b1a6ad9354b32814e26a3f64cd3ca",
+          "33db6902d9e52ff55b484fe0c519f5950c37dbd816251217f29fb803de5fd28c",
+          "70794a035cb8e711c4e695b8451c0aacf12bf13fef1cc4dc37722441b97cf23c",
+          "1b07a4db4e9d2f4a96ce953db8e3b93d820de33decc8bdce399f8aca57ab3227",
+          "fb9825d8c6781df5acffceb0d8e9b011a28023a40398ddeae39862cf08a9fc81",
+          "90e67438fec83536cd9dfa3e342fa02bed1103c0d97f79fb005640486d26f025"
+        ],
+        "version": "20000000",
+        "nbits": "17023cc1",
+        "ntime": "6a90ac44",
+        "clean_jobs": false,
+        "coinbase_printable": ".........................................!.....e....6K...|..g./slush/......j.......v..|.N..Y`.=&.........A..........&j$.!..U..x........i....\\.6...@...36._....."
+      },
+      {
+        "captured_at": 1787866212.2084274,
+        "job_id": "09",
+        "prev_hash": "0982b4a52b8e71ac24b70ffa854e4e3469f16e550000827b0000000000000000",
+        "coinbase1": "01000000010000000000000000000000000000000000000000000000000000000000000000ffffffff210305b70e03650600008d364b000000",
+        "coinbase2": "716b9b67042f736c7573682f0000000002b41ec112000000001976a9147c154ed1dc59609e3d26abb2df2ea3d587cd8c4188ac0000000000000000266a24aa21a9ed3dd757643fe7269cf4df21d72d2bc78aa3c92de33b3ae8521de5f4a0462ccf3200000000",
+        "merkle_branches": [
+          "030301a6eb167ea628774c54ed50beabcc4d7beff03590bb6773431d5aa46780",
+          "15d06d835792134991074a3ea30ed3c95a64a36cbc96695a8ca27b84426a0972",
+          "b186dddaad8941b664ce00b8c1f35f2ade5cb25408305789e504cbfbdc1dc51c",
+          "02204905e4a7c53e1d9251e69a77a2ecdd055ad07e69d373c0d5a9414a2e0b3e",
+          "4a14a106af4647319e6ee33fe0011db9ad87533a68b53fb257e770c573227183",
+          "0cf538ff76353327220c3f6a9a37d3351a35f1c2fcb6f6de4b0853e20eed0f14",
+          "969b837de513435cb7deb88b03708ab9c40e40093006b9dddedddec736e2a3fe",
+          "f53e19a308c3b7175192c0d73b6c3d8aac2ef088cabf1cade808479254ba8d67",
+          "ef0c048348ce7a63fc8b7704d06e95813a32db41e854ca26033db8b4853d77c5",
+          "5e479945ad6d239a9d29f8566a5bfbab12d8c688df1f2ed677609c9a7ef00e6c",
+          "e9e14645d4f5a0e1f85909201085aeb57f4b53fc74b026cd649ae4030c7b5e1a",
+          "8cfde4f481ba1924a04e3e4a5989fa0060c6746717d1f119c57a607ed3aad7c3",
+          "5fd36832fc2c899de682caafc080e5faa99048b45073ba7501b1dbfd23854bde"
+        ],
+        "version": "20000000",
+        "nbits": "17023cc1",
+        "ntime": "6a90ac62",
+        "clean_jobs": false,
+        "coinbase_printable": ".........................................!.....e....6K...qk.g./slush/..............v..|.N..Y`.=&.........A..........&j$.!..=.Wd?.&...!.-+....-.;:.R....F,.2...."
+      },
+      {
+        "captured_at": 1787866241.9695377,
+        "job_id": "0a",
+        "prev_hash": "0982b4a52b8e71ac24b70ffa854e4e3469f16e550000827b0000000000000000",
+        "coinbase1": "01000000010000000000000000000000000000000000000000000000000000000000000000ffffffff210305b70e03650600008d364b000000",
+        "coinbase2": "4bff9f67042f736c7573682f0000000002d5e4c112000000001976a9147c154ed1dc59609e3d26abb2df2ea3d587cd8c4188ac0000000000000000266a24aa21a9ed10ae347c940fa852fb4e1650531bb1c2f049191280ed1aca6a62c0e6ac0d345600000000",
+        "merkle_branches": [
+          "c27b2a06c09031aeebce41701eb2e52aba1674a726eba187c254d02ac66974ec",
+          "15d06d835792134991074a3ea30ed3c95a64a36cbc96695a8ca27b84426a0972",
+          "b186dddaad8941b664ce00b8c1f35f2ade5cb25408305789e504cbfbdc1dc51c",
+          "02204905e4a7c53e1d9251e69a77a2ecdd055ad07e69d373c0d5a9414a2e0b3e",
+          "99d7856928db069148489a8f44d4bc7c1eb6bc38c9d7bbf77053131e21946899",
+          "4bdda2a0bdc7a3ddddd7bf35bde319b827ec531781ad6a87f0f446ccb5c4ee84",
+          "0efcccf43ea55624142581527dbbb1887f41a91b25d8feb2136cf5d8b8f81737",
+          "ae356cdae7c5872e148449da9a9ccb652cd1d679bc00ad2045b8104a6e351da2",
+          "da7c282e2e9bae7b9bf6545b0bdd4fc63bc7d4a80129223eb37ae8973dfd55d4",
+          "04c5a7516c3b1a722269ca1d846de51add37be988ac400c3a6ead23e99a0626d",
+          "44826aacb79f6bb1462998de26535ef1af35ef9516f98284ef42455d577c5297",
+          "783ecd319fb34e72d57776da1bb32948cd41157d39266c7edb8816c59c2d6aa2",
+          "c7b59456ef8ebc0629bdd4342fc936b1ca457b8f0862f695209bfb9c2e67c6dd"
+        ],
+        "version": "20000000",
+        "nbits": "17023cc1",
+        "ntime": "6a90ac80",
+        "clean_jobs": false,
+        "coinbase_printable": ".........................................!.....e....6K...K..g./slush/..............v..|.N..Y`.=&.........A..........&j$.!....4|...R.N.PS....I......jb....4V...."
+      },
+      {
+        "captured_at": 1787866272.212384,
+        "job_id": "0b",
+        "prev_hash": "0982b4a52b8e71ac24b70ffa854e4e3469f16e550000827b0000000000000000",
+        "coinbase1": "01000000010000000000000000000000000000000000000000000000000000000000000000ffffffff210305b70e03650600008d364b000000",
+        "coinbase2": "7593a467042f736c7573682f00000000023ebdc212000000001976a9147c154ed1dc59609e3d26abb2df2ea3d587cd8c4188ac0000000000000000266a24aa21a9ed7035b4a6896d12646aa3f57a62808f2b80cf7070d868e3e40bc4acb8c4185d6200000000",
+        "merkle_branches": [
+          "dd262dbffe2cab9c426e528bcf151dcc1c567b8f2dac2b68b291a80ddc6ce4c0",
+          "15d06d835792134991074a3ea30ed3c95a64a36cbc96695a8ca27b84426a0972",
+          "b186dddaad8941b664ce00b8c1f35f2ade5cb25408305789e504cbfbdc1dc51c",
+          "02204905e4a7c53e1d9251e69a77a2ecdd055ad07e69d373c0d5a9414a2e0b3e",
+          "8d887fe113b2d63c024d6ccdc3a5f4cabea68004d49832aed0d9ce034f2a1b2f",
+          "a5f5445d41b7622933121f8874b8743f3b6dac6b712ce431242d6198a57c53b7",
+          "a55a801157c157be1d049c8f78d6ef6040c3fa63f2139c875a89d9abf8da1c91",
+          "bdf5eba5f7d75a02017de6b5fc138f3b042a0847eea1e01cb99b857df8a7e179",
+          "410ee83735f28c0c0e9297b5c9fb840c8fb87a64bfde7bf49a06573c93daac8d",
+          "1944d5071ac727d7c17880554eeb51781e5a0a0e0c361cfa6138985005a0c648",
+          "11bcd8f44bfec94e2829131c4ef5f0bb6178c7fa80881343ad1bfc3a1e7b8f63",
+          "5cb3941c896f92a4b7b07c5efd9ac03a1158aac814e52aa1bb6e6ba91a8cb01b",
+          "5e4deb0c95e4044f0d2e402880a019ffa103156611a0a571157914d3126fffcb"
+        ],
+        "version": "20000000",
+        "nbits": "17023cc1",
+        "ntime": "6a90ac9e",
+        "clean_jobs": false,
+        "coinbase_printable": ".........................................!.....e....6K...u..g./slush/.....>........v..|.N..Y`.=&.........A..........&j$.!..p5...m.dj..zb..+..pp.h........]b...."
+      },
+      {
+        "captured_at": 1787866302.177089,
+        "job_id": "0c",
+        "prev_hash": "0982b4a52b8e71ac24b70ffa854e4e3469f16e550000827b0000000000000000",
+        "coinbase1": "01000000010000000000000000000000000000000000000000000000000000000000000000ffffffff210305b70e03650600008d364b000000",
+        "coinbase2": "2f27a967042f736c7573682f0000000002ae20c312000000001976a9147c154ed1dc59609e3d26abb2df2ea3d587cd8c4188ac0000000000000000266a24aa21a9edebbf841f5c43373e29b18f47ec54fd4c3c1999c0eb9abcab9bef3546e64516c600000000",
+        "merkle_branches": [
+          "e5b094296a6cbcc4700bc46656e776a73730d1de5ca54ab0056db5a1d08fe91e",
+          "15d06d835792134991074a3ea30ed3c95a64a36cbc96695a8ca27b84426a0972",
+          "b186dddaad8941b664ce00b8c1f35f2ade5cb25408305789e504cbfbdc1dc51c",
+          "02204905e4a7c53e1d9251e69a77a2ecdd055ad07e69d373c0d5a9414a2e0b3e",
+          "8d887fe113b2d63c024d6ccdc3a5f4cabea68004d49832aed0d9ce034f2a1b2f",
+          "a936d2995d29e1a6ccaefea75c21aed64278ff52eae232c4349ace75ec7732a4",
+          "c52c2f9208b17a72595db914dd9384c1cd70ca851ed78d17afbd35af49f5984a",
+          "00aeb54f509bb3f6d898a7dcdbcb6a4c81e8458a5e1f34adcd4d5044e0cb958e",
+          "e8a3aef6fd7040b577cce61e1c4f34bc73c41ff88b4b12a3772ebd024cb06488",
+          "df66f53223f06ef70432e1bdd2e5aa1dfd0b9800c3d20e3f8cb8c05b7b672afa",
+          "62fc985bb1017b76055a8c58e6543b900400cc7dae07efa734c25459489135b5",
+          "d8c37f0d18fc59548d9c8eef4766c2b73360200a37e81564dfa89eb97ec1def3",
+          "704beeeb8be693c59e47483d307c1beab1c94c2b3d171db87ae3a1f5466160ad"
+        ],
+        "version": "20000000",
+        "nbits": "17023cc1",
+        "ntime": "6a90acbc",
+        "clean_jobs": false,
+        "coinbase_printable": ".........................................!.....e....6K.../'.g./slush/...... .......v..|.N..Y`.=&.........A..........&j$.!......\\C7>)..G.T.L<.........5F.E......"
+      },
+      {
+        "captured_at": 1787866332.0154352,
+        "job_id": "0d",
+        "prev_hash": "0982b4a52b8e71ac24b70ffa854e4e3469f16e550000827b0000000000000000",
+        "coinbase1": "01000000010000000000000000000000000000000000000000000000000000000000000000ffffffff210305b70e03650600008d364b000000",
+        "coinbase2": "1bbbad67042f736c7573682f0000000002d16ac412000000001976a9147c154ed1dc59609e3d26abb2df2ea3d587cd8c4188ac0000000000000000266a24aa21a9ed35fca8a43cff716f115792214ef73e79b3dd42fbd14edbcfe97e8ade1d7e94d600000000",
+        "merkle_branches": [
+          "85c9a11968b73601d021a84b3dc2093ad2888401e9ff9d46982eb3c0f940d63b",
+          "15d06d835792134991074a3ea30ed3c95a64a36cbc96695a8ca27b84426a0972",
+          "b186dddaad8941b664ce00b8c1f35f2ade5cb25408305789e504cbfbdc1dc51c",
+          "02204905e4a7c53e1d9251e69a77a2ecdd055ad07e69d373c0d5a9414a2e0b3e",
+          "8d887fe113b2d63c024d6ccdc3a5f4cabea68004d49832aed0d9ce034f2a1b2f",
+          "a46a3f549a35f027d9efa9519684af25607177477e54f9cc50654ca4540f1301",
+          "098c23356a48b5cbd8f5e10cf559396ef09f0b7390067c73386aa008d91dacbe",
+          "7710acefbb9d15fe9e9fceb7df387cc1ba421295b86a22840f62431d11967e85",
+          "8d33d578b8b2f5b34f38802c7ed827833c82b40696950fc07e07b32653f46df6",
+          "fc3b7942158fa215838e61894e7081d055910351d0264b624b457dd446185489",
+          "e68e744beaa27c47181ccff9b9e156b87c68054a057ba0381e988714aea12cec",
+          "987c5bafef537d4e561fe118f3756507d36086ca33efa45a9cf23c48c7377d87",
+          "e49a2c5885966e6946d3fd98c0176110e9854308eb9370eaac0cd25a6d7b8f27"
+        ],
+        "version": "20000000",
+        "nbits": "17023cc1",
+        "ntime": "6a90acda",
+        "clean_jobs": false,
+        "coinbase_printable": ".........................................!.....e....6K......g./slush/......j.......v..|.N..Y`.=&.........A..........&j$.!..5...<.qo.W.!N.>y..B..N...~...~......"
+      },
+      {
+        "captured_at": 1787866362.2455943,
+        "job_id": "0e",
+        "prev_hash": "0982b4a52b8e71ac24b70ffa854e4e3469f16e550000827b0000000000000000",
+        "coinbase1": "01000000010000000000000000000000000000000000000000000000000000000000000000ffffffff210305b70e03650600008d364b000000",
+        "coinbase2": "074fb267042f736c7573682f00000000020de0c412000000001976a9147c154ed1dc59609e3d26abb2df2ea3d587cd8c4188ac0000000000000000266a24aa21a9ed7627e7c9c0608b5bbcb4a9a3cf8eb5117557472a83fb8d351a4f84461bde31de00000000",
+        "merkle_branches": [
+          "29671e5df4e248074a93d0cff7f47fd9356fa571e0295c2747cac61ba50a50db",
+          "15d06d835792134991074a3ea30ed3c95a64a36cbc96695a8ca27b84426a0972",
+          "b186dddaad8941b664ce00b8c1f35f2ade5cb25408305789e504cbfbdc1dc51c",
+          "02204905e4a7c53e1d9251e69a77a2ecdd055ad07e69d373c0d5a9414a2e0b3e",
+          "8d887fe113b2d63c024d6ccdc3a5f4cabea68004d49832aed0d9ce034f2a1b2f",
+          "a46a3f549a35f027d9efa9519684af25607177477e54f9cc50654ca4540f1301",
+          "50270927e1d4126dc02992b58c8e6170e8ac91b6dcbc9b46c70ce8ca398f10cd",
+          "4e780fe5565eec4f1cb37b1d7e83f9e45317d299e242364a67e354c6a8624a85",
+          "95c4fb68ca526e9cab79cfb9b09ec56d7aa2edd819bd13d9d9b77bd10c4fa74d",
+          "623dea238c9d8e20fa71c88732df3349a69cbf8b02386391a7036135d27c15e2",
+          "a0dae4eee77a6b82e2bcbccadfdaf65b59a1dd912462bf2079f868323d368ab0",
+          "5cc1cb3e394f79b6aa3ba8eceeb993397b53e3fca71e2758af80bda90cd3aee8",
+          "2318de2f6b9843b593abcd10dd1cea99bb16f24699ededcce51e9ead4d160057"
+        ],
+        "version": "20000000",
+        "nbits": "17023cc1",
+        "ntime": "6a90acf8",
+        "clean_jobs": false,
+        "coinbase_printable": ".........................................!.....e....6K....O.g./slush/..............v..|.N..Y`.=&.........A..........&j$.!..v'...`.[........uWG*...5.O.F..1....."
+      },
+      {
+        "captured_at": 1787866392.2371948,
+        "job_id": "0f",
+        "prev_hash": "0982b4a52b8e71ac24b70ffa854e4e3469f16e550000827b0000000000000000",
+        "coinbase1": "01000000010000000000000000000000000000000000000000000000000000000000000000ffffffff210305b70e03650600008d364b000000",
+        "coinbase2": "fce2b667042f736c7573682f0000000002513bc612000000001976a9147c154ed1dc59609e3d26abb2df2ea3d587cd8c4188ac0000000000000000266a24aa21a9ed2022ea71ca730f2f1dd9a1c345fbe6f4a1b5d148ff802f3780d701755e726e8000000000",
+        "merkle_branches": [
+          "2b9129605a674b5e9efcf485e9cd96608bd9cced29240cc7e32288a2c89c79b1",
+          "15d06d835792134991074a3ea30ed3c95a64a36cbc96695a8ca27b84426a0972",
+          "b186dddaad8941b664ce00b8c1f35f2ade5cb25408305789e504cbfbdc1dc51c",
+          "be0988fc55918d57e99966da9b496914a57f1895543af766ee39fe08f9a8f66d",
+          "0ed49028f654d403e7e70ac11319f1f8ba4ab7427e7722e04d168f0388206162",
+          "e9f4c13d48696a791090dc3990dd774891b4584e3d772ec573438dcf55e3a3eb",
+          "853adcdf5dfd323ed5bc11c81c5402775fa6d758f0918e5c0bec3a22f46ecf84",
+          "eff61da06729f463f2d26e9abe5106165ed4990ec454dee882a01f1268637640",
+          "105b4392de7dbf3092376cb492ba969d956db1f9ca5d44ec01ba0cf9cf8361a7",
+          "2e385fd7537065129ad6d34c767cc18e2ecd33484a5c8f217492b344035c6d28",
+          "0ab7aa91341ec5d28a8c19c020dc34e3a71cf41b4c3a673a7fa97860307a352d",
+          "b4d5adccc61db94ce98ab2442452a45cb28c407335931d51bc96e7208fa0af60",
+          "a74d0ad3ddf0ceb69ce9289ede100bc5c8238a4a4873bce47f4619de3900c9b3"
+        ],
+        "version": "20000000",
+        "nbits": "17023cc1",
+        "ntime": "6a90ad16",
+        "clean_jobs": false,
+        "coinbase_printable": ".........................................!.....e....6K......g./slush/.....Q;.......v..|.N..Y`.=&.........A..........&j$.!.. \".q.s./....E......H../7...u^rn....."
+      }
+    ],
+    "antpool": [
+      {
+        "captured_at": 1787865969.075386,
+        "job_id": "3776272",
+        "prev_hash": "0982b4a52b8e71ac24b70ffa854e4e3469f16e550000827b0000000000000000",
+        "coinbase1": "01000000010000000000000000000000000000000000000000000000000000000000000000ffffffff560305b70e194d696e656420627920416e74506f6f6c2015006407ff782e7afabe6d6d54bdcf53a7046aeb89ec82fbc51aac6c45dd61d1d198f5a0f11e7337d8a6dff71000000000000000",
+        "coinbase2": "ffffffff07220200000000000017a91442402a28dd61f2718a4b27ae72a4791d5bbdade7872182bb120000000017a9145249bdf2c131d43995cff42e8feee293f79297a8870000000000000000266a24aa21a9ed46247ae3e10a0fd0dc80103494680cdf686920c9613c9b80c760d09be1c6fcaf00000000000000002f6a2d434f5245012953559db5cc88ab20b1960faa9793803d0703374e3ecda72cb7961caa4b541b1e322bcfe0b5a0300000000000000000146a12455853415401000d130f0e0e0b041f1200130000000000000000296a277379730924cf6d4f4c316b02a4d2501084b37361a97e6df57d45a87abf0ce3977849f16612230000000000000000002b6a2952534b424c4f434b3a8ac78a32121b6518468ab7dd4ea411d05903e9ee78a1c00b353dd820008c358300000000",
+        "merkle_branches": [
+          "10114aaad1b51274c6a8cc0507ada6b0dea2952961db1f8869bfc53b3018c49d",
+          "cad860e4d8885096cb0bb90104626106cbab53e25c459781be7ffa0c62692d96",
+          "b186dddaad8941b664ce00b8c1f35f2ade5cb25408305789e504cbfbdc1dc51c",
+          "02204905e4a7c53e1d9251e69a77a2ecdd055ad07e69d373c0d5a9414a2e0b3e",
+          "1bc94df07be16c29f45221731642a78aa62fad6a030b58272abc4bd1662186df",
+          "d33e0922461aa41b83843146df59c4ce6f8e8a7a07174ba0e506c08b9f8e9400",
+          "513cfdbfb9d93b940babd994869bc9ab975c6b4c44febf02d0a5e81759dc5307",
+          "6d954afd165d817623dd4f13ea9256b44ee20eab72b989f6f0d643e255e501a4",
+          "13736d298e269e73e4875474e66003ff54e60d5ab6ea8c2560c301a9a44e9eca",
+          "cd039db758e0880253f8d51fc2b0b3be1da4bb8c0ef65d0cfead82eba3f52ecd",
+          "efcba3975f48d571f2293d831310cecd515abfa54dc622b508b1b2c688259bb2",
+          "a3e3a28835ad42849596434770394bd6bc3950e736ee1ee575e158cdbf7834cb",
+          "5cdcb37f04f0006b33673cb5e3d604b45e79e8f7639a261cbdd3e6611a0b5b5e"
+        ],
+        "version": "20000000",
+        "nbits": "17023cc1",
+        "ntime": "6a90ab5b",
+        "clean_jobs": true,
+        "coinbase_printable": ".........................................V.....Mined by AntPool ..d..x.z..mmT..S..j........lE.a.......s7.................\"..........B@*(.a.q.K'.r.y.[....!..........RI...1.9.....................&j$.!..F$z........4.h..hi .a<...`............../j-CORE.)SU..... .......=..7N>..,....KT..2+....0.........j.E"
+      },
+      {
+        "captured_at": 1787865977.5791838,
+        "job_id": "3776274",
+        "prev_hash": "0982b4a52b8e71ac24b70ffa854e4e3469f16e550000827b0000000000000000",
+        "coinbase1": "01000000010000000000000000000000000000000000000000000000000000000000000000ffffffff560305b70e194d696e656420627920416e74506f6f6c2015006407ffa63209fabe6d6dd202036d2f6fde8cca959c6915379f9ff87605ab26e15c152602081a10d234e51000000000000000",
+        "coinbase2": "ffffffff07220200000000000017a91442402a28dd61f2718a4b27ae72a4791d5bbdade7873c2abc120000000017a9145249bdf2c131d43995cff42e8feee293f79297a8870000000000000000266a24aa21a9edf34041d4452415e20671bfc3f72b1e286d776566612fe9a91cb2841dda1ebeda00000000000000002f6a2d434f5245012953559db5cc88ab20b1960faa9793803d0703374e3ecda72cb7961caa4b541b1e322bcfe0b5a0300000000000000000146a12455853415401000d130f0e0e0b041f1200130000000000000000296a277379730924cf6d4f4c316b02a4d2501084b37361a97e6df57d45a87abf0ce3977849f16612230000000000000000002b6a2952534b424c4f434b3a731e0a196c52caeeda74ecf212f8807ac551415d78a1c00b353dd822008c358400000000",
+        "merkle_branches": [
+          "10114aaad1b51274c6a8cc0507ada6b0dea2952961db1f8869bfc53b3018c49d",
+          "f284f3a8cce0d83cd1e9df94f532d13beea0595c35f66f2466a10831161b0951",
+          "b186dddaad8941b664ce00b8c1f35f2ade5cb25408305789e504cbfbdc1dc51c",
+          "02204905e4a7c53e1d9251e69a77a2ecdd055ad07e69d373c0d5a9414a2e0b3e",
+          "30aa2b3014e19b400c89ea22a3b7743e48f47e618c9f22a6f21dd5448fddcf2a",
+          "9c8618db9c88f8a1b7d70d64e2719f00855af4ef1159d77c9ba079029d1a5eea",
+          "71cd95b5d40fcb3f99a1fc6aabef4eb0f3afbf99505fe34cdb7283c5d933c669",
+          "6bbed13aeaf6cd0b1f1ffc92d0a14191b673cb169c6baf47926ef145e25e1ec8",
+          "b9839eaa2da856d5e42bae37d28a9ddf7ec276c999706a60c39e767ffb656774",
+          "0043ead3b7e0f9fb10c2b5d8225b36c957a323c54cca0fbb9e62d4660130b2d9",
+          "5cfcbcda037d70cbc38ae21a6ceee76b79d756bbdf8813d4aa53aa2b932d1313",
+          "e3defe2213785f51d421095afc170cc56ef4e073edc8983e7281d1181a8ccc60",
+          "63aff5843b93ee3e5302e0a34fa851a38ef96295ede83d70f57a0e3ac163e124"
+        ],
+        "version": "20000000",
+        "nbits": "17023cc1",
+        "ntime": "6a90ab79",
+        "clean_jobs": false,
+        "coinbase_printable": ".........................................V.....Mined by AntPool ..d...2...mm...m/o.....i.7...v..&.\\.&.....4..............\"..........B@*(.a.q.K'.r.y.[....<*.........RI...1.9.....................&j$.!...@A.E$...q...+.(mwefa/................../j-CORE.)SU..... .......=..7N>..,....KT..2+....0.........j.E"
+      },
+      {
+        "captured_at": 1787866007.636142,
+        "job_id": "3776276",
+        "prev_hash": "0982b4a52b8e71ac24b70ffa854e4e3469f16e550000827b0000000000000000",
+        "coinbase1": "01000000010000000000000000000000000000000000000000000000000000000000000000ffffffff560305b70e194d696e656420627920416e74506f6f6c2015006407ffd3fef4fabe6d6d5a24258956bf97d5b68d18a9390a9cd8801ab4818725899407b2e1d9a22083b21000000000000000",
+        "coinbase2": "ffffffff07220200000000000017a91442402a28dd61f2718a4b27ae72a4791d5bbdade78755a6bc120000000017a9145249bdf2c131d43995cff42e8feee293f79297a8870000000000000000266a24aa21a9ed1911093f328425c5f59d3a806eb3dfc966aa3cdd8a6375367139198f3eb0f26800000000000000002f6a2d434f5245012953559db5cc88ab20b1960faa9793803d0703374e3ecda72cb7961caa4b541b1e322bcfe0b5a0300000000000000000146a12455853415401000d130f0e0e0b041f1200130000000000000000296a277379730924cf6d4f4c316b02a4d2501084b37361a97e6df57d45a87abf0ce3977849f16612230000000000000000002b6a2952534b424c4f434b3a731e0a196c52caeeda74ecf212f8807ac551415d78a1c00b353dd822008c358400000000",
+        "merkle_branches": [
+          "10114aaad1b51274c6a8cc0507ada6b0dea2952961db1f8869bfc53b3018c49d",
+          "d7fd6aed5adb13ca56b6ce7db78448cad80629a754d278291bbcd218c88ba534",
+          "b186dddaad8941b664ce00b8c1f35f2ade5cb25408305789e504cbfbdc1dc51c",
+          "02204905e4a7c53e1d9251e69a77a2ecdd055ad07e69d373c0d5a9414a2e0b3e",
+          "30aa2b3014e19b400c89ea22a3b7743e48f47e618c9f22a6f21dd5448fddcf2a",
+          "2644c3c8e46adb44b4fb4630698c4eedf66c4921ae4215ce3cee7556a0f812be",
+          "a45282a9d1dcaf82658a600fc6bc5d980069c36b99d2c2de10b7e1beccf820c5",
+          "5664adf5005a19b99d412f70c511ca4a04250de0fa1bb49e366e0b3c8186b5d6",
+          "ec2fb34eb9599e5e0567a7d60970280ce1a1e6f40d48f9e64aa3355ee21c0bbf",
+          "42e04e254c9ea28a40537b0297474b6a4d3c5ca8667c0877e7b9c2ffd2de8963",
+          "25a135b7b1c31b6e5c7635c979301267a13380b1f8583cee020b073f08d93fb0",
+          "7fc6367f27947aba44d46b275bcea88922b7907d607e5f718c2bf1fc726f8d01",
+          "d0965852ed54098c70b39f4744769ecc4b1d0182645f675a6bf97b74c9b66a24"
+        ],
+        "version": "20000000",
+        "nbits": "17023cc1",
+        "ntime": "6a90ab97",
+        "clean_jobs": false,
+        "coinbase_printable": ".........................................V.....Mined by AntPool ..d.......mmZ$%.V.......9........%....... ...............\"..........B@*(.a.q.K'.r.y.[....U..........RI...1.9.....................&j$.!.....?2.%...:.n...f.<..cu6q9..>..h......../j-CORE.)SU..... .......=..7N>..,....KT..2+....0.........j.E"
+      },
+      {
+        "captured_at": 1787866037.7868214,
+        "job_id": "3776281",
+        "prev_hash": "0982b4a52b8e71ac24b70ffa854e4e3469f16e550000827b0000000000000000",
+        "coinbase1": "01000000010000000000000000000000000000000000000000000000000000000000000000ffffffff560305b70e194d696e656420627920416e74506f6f6c20150064070001ffbffabe6d6dfebc7f816baa792f566fe4e1a0fa3ead38a341b16b6c93c10e6e40dc0c82a2861000000000000000",
+        "coinbase2": "ffffffff07220200000000000017a91442402a28dd61f2718a4b27ae72a4791d5bbdade7879677bd120000000017a9145249bdf2c131d43995cff42e8feee293f79297a8870000000000000000266a24aa21a9ed03a93f0d3d6318ac1f68da4879751ba54e394407416ec1b4d13215f06fdee60500000000000000002f6a2d434f5245012953559db5cc88ab20b1960faa9793803d0703374e3ecda72cb7961caa4b541b1e322bcfe0b5a0300000000000000000146a12455853415401000d130f0e0e0b041f1200130000000000000000296a277379730924cf6d4f4c316b02a4d2501084b37361a97e6df57d45a87abf0ce3977849f16612230000000000000000002b6a2952534b424c4f434b3a731e0a196c52caeeda74ecf212f8807ac551415d78a1c00b353dd822008c358400000000",
+        "merkle_branches": [
+          "10114aaad1b51274c6a8cc0507ada6b0dea2952961db1f8869bfc53b3018c49d",
+          "7433c1899377e5d3503d03b9e73ac58dbadbf1aa697cd80c92ee769020653bd8",
+          "b186dddaad8941b664ce00b8c1f35f2ade5cb25408305789e504cbfbdc1dc51c",
+          "02204905e4a7c53e1d9251e69a77a2ecdd055ad07e69d373c0d5a9414a2e0b3e",
+          "30aa2b3014e19b400c89ea22a3b7743e48f47e618c9f22a6f21dd5448fddcf2a",
+          "2644c3c8e46adb44b4fb4630698c4eedf66c4921ae4215ce3cee7556a0f812be",
+          "b3c21b500be7f892894973264aee1310d17bd9457b4ca2447085ecf76ae0b478",
+          "e5d8ba1a35dfa63268068b80e716788a23fbd15cab2fd4a033e36b07c640fa55",
+          "13ec839b41aba74df31392c37c0653fa143930d39b2aba2aac1fed1e112d3fd7",
+          "d4ba8e085123ebca09d7e537bf89b12c6587882457139cf18272be0f6f1ebb5f",
+          "4d680f21ecfd20266f9e086058ef67823130c7a704076c20664c8fdc7a3c6cd6",
+          "f2dd9d19b11454e8bd7f6ac39c01ae5abb0c3b48257b9a6f3d497ca1c2b0b69e",
+          "99cb064f2f4dbbf95112044214dc725543f4fa630ab45e69fe264d87b77850d7"
+        ],
+        "version": "20000000",
+        "nbits": "17023cc1",
+        "ntime": "6a90abb5",
+        "clean_jobs": false,
+        "coinbase_printable": ".........................................V.....Mined by AntPool ..d.......mm....k.y/Vo....>.8.A.kl...n@..................\"..........B@*(.a.q.K'.r.y.[.....w.........RI...1.9.....................&j$.!....?.=c...h.Hyu..N9D.An...2..o.........../j-CORE.)SU..... .......=..7N>..,....KT..2+....0.........j.E"
+      },
+      {
+        "captured_at": 1787866067.9812288,
+        "job_id": "3776284",
+        "prev_hash": "0982b4a52b8e71ac24b70ffa854e4e3469f16e550000827b0000000000000000",
+        "coinbase1": "01000000010000000000000000000000000000000000000000000000000000000000000000ffffffff560305b70e194d696e656420627920416e74506f6f6c201500640700301e3ffabe6d6d24c464e1cfe954651d6b6095f274fc57bb523bc48b8d79cb51fec5219e67610f1000000000000000",
+        "coinbase2": "ffffffff07220200000000000017a91442402a28dd61f2718a4b27ae72a4791d5bbdade787412dbe120000000017a9145249bdf2c131d43995cff42e8feee293f79297a8870000000000000000266a24aa21a9eda0a778498638ecb8955b50645534e5a60fa765f87b60245168e31cae2a12534800000000000000002f6a2d434f5245012953559db5cc88ab20b1960faa9793803d0703374e3ecda72cb7961caa4b541b1e322bcfe0b5a0300000000000000000146a12455853415401000d130f0e0e0b041f1200130000000000000000296a277379730924cf6d4f4c316b02a4d2501084b37361a97e6df57d45a87abf0ce3977849f16612230000000000000000002b6a2952534b424c4f434b3acc20424d6531b0594aa68d9f0b631ab5ff2fce3578a1c00b353dd822008c358500000000",
+        "merkle_branches": [
+          "f7ef46ec62e8f60c3c59f73b953d92b871924bc0ad77416c7ef3563ad1c1c858",
+          "15d06d835792134991074a3ea30ed3c95a64a36cbc96695a8ca27b84426a0972",
+          "b186dddaad8941b664ce00b8c1f35f2ade5cb25408305789e504cbfbdc1dc51c",
+          "02204905e4a7c53e1d9251e69a77a2ecdd055ad07e69d373c0d5a9414a2e0b3e",
+          "bae74ffec5163930782a370d3c4b9d5f5fbd2773ea5eb0d13ded20f33e47b7bd",
+          "09f570116c215a57104a27385074491b5eeeeaff4610a7384ec66594b78845c5",
+          "824fca98157017f43088c75ad4745e6cd871629d1a52617d082119940cbd31a9",
+          "60bd851d716b84b345c0143e284c91814a8133078b953af99a1e14a3bab0830d",
+          "b9af6b96c41632d271a1507c7f302df3fe4c7b048f7930d5eca701adcff916dc",
+          "4fb5870d446405f97de05375dd6bc8ee3d3adf6c2866c5c92325d7c45bd57cc6",
+          "5b7129bf306d70c84089ef5ca0d16f926a8c2b6f085fe6484ad6c211618bc09c",
+          "8b4ac6a79c524903a9e7bbbf59e12ac59d1acdbbd3cc8083afa67b62f201819e",
+          "6161359408b45f92196a69526f957b7d00e3dc1fd1aa79a368e92330edfd14ed"
+        ],
+        "version": "20000000",
+        "nbits": "17023cc1",
+        "ntime": "6a90abd3",
+        "clean_jobs": false,
+        "coinbase_printable": ".........................................V.....Mined by AntPool ..d..0.?..mm$.d...Te.k`..t.W.R;...y.Q..!.ga..............\"..........B@*(.a.q.K'.r.y.[....A-.........RI...1.9.....................&j$.!....xI.8...[PdU4....e.{`$Qh...*.SH......../j-CORE.)SU..... .......=..7N>..,....KT..2+....0.........j.E"
+      },
+      {
+        "captured_at": 1787866098.2820501,
+        "job_id": "3776288",
+        "prev_hash": "0982b4a52b8e71ac24b70ffa854e4e3469f16e550000827b0000000000000000",
+        "coinbase1": "01000000010000000000000000000000000000000000000000000000000000000000000000ffffffff560305b70e194d696e656420627920416e74506f6f6c2015006407005e55a6fabe6d6d57fae3d6a200b363b22aea0babb67b6d8e67aa4c52525ccda21f1d2c99bff3631000000000000000",
+        "coinbase2": "ffffffff07220200000000000017a91442402a28dd61f2718a4b27ae72a4791d5bbdade7875a07bf120000000017a9145249bdf2c131d43995cff42e8feee293f79297a8870000000000000000266a24aa21a9ed2ed619557334f4d3fdee0a0743247d7fe73dde5daea3b5ad16a54cf91334a53000000000000000002f6a2d434f5245012953559db5cc88ab20b1960faa9793803d0703374e3ecda72cb7961caa4b541b1e322bcfe0b5a0300000000000000000146a12455853415401000d130f0e0e0b041f1200130000000000000000296a277379730924cf6d4f4c316b02a4d2501084b37361a97e6df57d45a87abf0ce3977849f16612230000000000000000002b6a2952534b424c4f434b3acc20424d6531b0594aa68d9f0b631ab5ff2fce3578a1c00b353dd822008c358500000000",
+        "merkle_branches": [
+          "d633c18758c20c42f90fea8b488d77bb515c9c34ba209fd0da8f65a6c483387d",
+          "15d06d835792134991074a3ea30ed3c95a64a36cbc96695a8ca27b84426a0972",
+          "b186dddaad8941b664ce00b8c1f35f2ade5cb25408305789e504cbfbdc1dc51c",
+          "02204905e4a7c53e1d9251e69a77a2ecdd055ad07e69d373c0d5a9414a2e0b3e",
+          "d79f0a6f240038a0a01f00d69a366354f5c54bd1d52513e22854cc6cfc3465fb",
+          "263301ce3b3cb41cbc5bbe975f3d80ac5509a68fb871837a42314ec218be473a",
+          "0bc51f68179ccc0d2562710d155406879d39d660ba259696ff3dcb9975be347e",
+          "759c6d5ed403cea35230588632331600d3044a0704dba432027694ec9346446e",
+          "3b6157e110005592b94f2091ff2840cda6fddf4e762619cd89e065771a23d7f6",
+          "ff9485dcf08fb5201f6d72ad12ef23ed9932e45abab9b0b7fba003b0d4a445ba",
+          "f7c8fc56cf730809bdca3aba2ce1296e7fd362868f9cf9f19ee548212687518b",
+          "ea8ca9047d14261bb675be60c72f78e58e2417abb8476b0f9d95d45e31fd3a4b",
+          "3a94f65919f91cfafd89b83a7a6c0e11c7d7612ad4d4bc0e3c3d6b9a263c66bd"
+        ],
+        "version": "20000000",
+        "nbits": "17023cc1",
+        "ntime": "6a90abf2",
+        "clean_jobs": false,
+        "coinbase_printable": ".........................................V.....Mined by AntPool ..d..^U...mmW......c.*....{m.g.LRR\\....,...c.............\"..........B@*(.a.q.K'.r.y.[....Z..........RI...1.9.....................&j$.!.....Us4......C$}..=.]......L..4.0......../j-CORE.)SU..... .......=..7N>..,....KT..2+....0.........j.E"
+      },
+      {
+        "captured_at": 1787866128.5258188,
+        "job_id": "3776290",
+        "prev_hash": "0982b4a52b8e71ac24b70ffa854e4e3469f16e550000827b0000000000000000",
+        "coinbase1": "01000000010000000000000000000000000000000000000000000000000000000000000000ffffffff560305b70e194d696e656420627920416e74506f6f6c2015006407008c7b12fabe6d6dfaa14b139198e8b5a9c5c972ebc91bee96cc07a680fadcafc25ac5f91c6b62491000000000000000",
+        "coinbase2": "ffffffff07220200000000000017a91442402a28dd61f2718a4b27ae72a4791d5bbdade787db9abf120000000017a9145249bdf2c131d43995cff42e8feee293f79297a8870000000000000000266a24aa21a9ed6486625f5fe4472dd4262ab6ccd350335fc19a2d0b79639f6f98d8f3f015b7d200000000000000002f6a2d434f5245012953559db5cc88ab20b1960faa9793803d0703374e3ecda72cb7961caa4b541b1e322bcfe0b5a0300000000000000000146a12455853415401000d130f0e0e0b041f1200130000000000000000296a277379730924cf6d4f4c316b02a4d2501084b37361a97e6df57d45a87abf0ce3977849f16612230000000000000000002b6a2952534b424c4f434b3a1001febc0eb4898bb54b1c2bb94439e9f562da0d78a1c00b353dd81d008c358600000000",
+        "merkle_branches": [
+          "55931ef37fc767078c474363fb808e538be7f14cf652ac3de7f02a3a17908fce",
+          "15d06d835792134991074a3ea30ed3c95a64a36cbc96695a8ca27b84426a0972",
+          "b186dddaad8941b664ce00b8c1f35f2ade5cb25408305789e504cbfbdc1dc51c",
+          "02204905e4a7c53e1d9251e69a77a2ecdd055ad07e69d373c0d5a9414a2e0b3e",
+          "d79f0a6f240038a0a01f00d69a366354f5c54bd1d52513e22854cc6cfc3465fb",
+          "78eae46b6c6e01f5da40df1c9647039c29ce6fbe29993d33acbc9a04d913d26b",
+          "7988086ecd7b82ab5a7543d3aae657fc921bccdc9ada64b30cbec2caf6b34847",
+          "8caf4bd399d771190730c92f210de70fc36144fa4146a5e887558057b3e19a20",
+          "b59450ba1f7758bf7bb5fd93463ac3f22c1007a23459f208db877992c430492a",
+          "0f91bcd02ed0799557a4c5002660280ce7b994a802d6204163299e0699c2a930",
+          "6c588a2486c58014cfbc2daf00c1eba264151cffd0e4901b55cef568277eba94",
+          "1c16b193e297800a9e7082e4b0495bc34867dcc0eb47c7a1d0b412c0e165d12d",
+          "399779eb6edb7ab9040135db1a256d0bb4bca5d4a6e6d90df7a5da145b233ed7"
+        ],
+        "version": "20000000",
+        "nbits": "17023cc1",
+        "ntime": "6a90ac10",
+        "clean_jobs": false,
+        "coinbase_printable": ".........................................V.....Mined by AntPool ..d...{...mm..K........r.............Z...kbI.............\"..........B@*(.a.q.K'.r.y.[...............RI...1.9.....................&j$.!..d.b__.G-.&*...P3_..-.yc.o.............../j-CORE.)SU..... .......=..7N>..,....KT..2+....0.........j.E"
+      },
+      {
+        "captured_at": 1787866158.617565,
+        "job_id": "3776293",
+        "prev_hash": "0982b4a52b8e71ac24b70ffa854e4e3469f16e550000827b0000000000000000",
+        "coinbase1": "01000000010000000000000000000000000000000000000000000000000000000000000000ffffffff560305b70e194d696e656420627920416e74506f6f6c201500640700ba640bfabe6d6d4a44169c051c72bb255bd194859369ca0c74e159e3bcbfb0c12f62437db9bf0e1000000000000000",
+        "coinbase2": "ffffffff07220200000000000017a91442402a28dd61f2718a4b27ae72a4791d5bbdade787ca45c0120000000017a9145249bdf2c131d43995cff42e8feee293f79297a8870000000000000000266a24aa21a9ed74caba5ce25d7a1ef7d0cf10bd47688427b23e3b42e500108e9a6c23066d609000000000000000002f6a2d434f5245012953559db5cc88ab20b1960faa9793803d0703374e3ecda72cb7961caa4b541b1e322bcfe0b5a0300000000000000000146a12455853415401000d130f0e0e0b041f1200130000000000000000296a277379730924cf6d4f4c316b02a4d2501084b37361a97e6df57d45a87abf0ce3977849f16612230000000000000000002b6a2952534b424c4f434b3a1001febc0eb4898bb54b1c2bb94439e9f562da0d78a1c00b353dd81d008c358600000000",
+        "merkle_branches": [
+          "7789ef4a4ebd4b86cd5fdb1773aea99996b6567cb518d956963530495235444a",
+          "15d06d835792134991074a3ea30ed3c95a64a36cbc96695a8ca27b84426a0972",
+          "b186dddaad8941b664ce00b8c1f35f2ade5cb25408305789e504cbfbdc1dc51c",
+          "02204905e4a7c53e1d9251e69a77a2ecdd055ad07e69d373c0d5a9414a2e0b3e",
+          "d79f0a6f240038a0a01f00d69a366354f5c54bd1d52513e22854cc6cfc3465fb",
+          "fae360738a7c4130a17d41ddf5d97f54aaf9518d6ce591c7bfbeb8098aca2cb3",
+          "beaa95a6f8b76b1996446caf2f4c1e3fed40e638519c58c5ca39d06048262f3b",
+          "6546d30c6032e167492c871732b37b01fd5a94c80103e5ab4bdc71f11caeed88",
+          "1c1ba465051970242f269f43ca04a662326bb6b3e2ae819d65a3bd33ec48f36e",
+          "345befe909fab314d1de51d260cdee681a90713ab93d759f2b2b6d4506fa9ceb",
+          "9ca6cd6282272661052611b8f7b750a7b4f7680f3bed94e7df84b321a374be5f",
+          "c87f99d59c5a36aed2cfb288e11cc8cbc39f91a71c9f8094e7cc8904856dc133",
+          "43a854d5db01e9fae8463e79e3cd60c714791c5c96927cfa432ca128af0895eb"
+        ],
+        "version": "20000000",
+        "nbits": "17023cc1",
+        "ntime": "6a90ac2e",
+        "clean_jobs": false,
+        "coinbase_printable": ".........................................V.....Mined by AntPool ..d...d...mmJD....r.%[....i..t.Y...../bC}................\"..........B@*(.a.q.K'.r.y.[.....E.........RI...1.9.....................&j$.!..t..\\.]z......Gh.'.>;B.....l#.m`........./j-CORE.)SU..... .......=..7N>..,....KT..2+....0.........j.E"
+      },
+      {
+        "captured_at": 1787866188.6656702,
+        "job_id": "3776296",
+        "prev_hash": "0982b4a52b8e71ac24b70ffa854e4e3469f16e550000827b0000000000000000",
+        "coinbase1": "01000000010000000000000000000000000000000000000000000000000000000000000000ffffffff560305b70e194d696e656420627920416e74506f6f6c201500640700e83c2cfabe6d6d8e482fb9a014b8bf10f94ff66b52b609e545bb37e2ae084ea22d3c62a018e92e1000000000000000",
+        "coinbase2": "ffffffff07220200000000000017a91442402a28dd61f2718a4b27ae72a4791d5bbdade78706b7c0120000000017a9145249bdf2c131d43995cff42e8feee293f79297a8870000000000000000266a24aa21a9edf0a2206a26f0bfc4a9eb42a7e8c76456b543760f2525eecf218ba2485bf00bc500000000000000002f6a2d434f5245012953559db5cc88ab20b1960faa9793803d0703374e3ecda72cb7961caa4b541b1e322bcfe0b5a0300000000000000000146a12455853415401000d130f0e0e0b041f1200130000000000000000296a277379730924cf6d4f4c316b02a4d2501084b37361a97e6df57d45a87abf0ce3977849f16612230000000000000000002b6a2952534b424c4f434b3ac7e473b21d68aa176770fc30b00046a8b957218278a1c00b353dd81d008c358700000000",
+        "merkle_branches": [
+          "ce6cc641674e24bf05307c464f9b292b5375ae6638a3a2071b745067f9d27027",
+          "15d06d835792134991074a3ea30ed3c95a64a36cbc96695a8ca27b84426a0972",
+          "b186dddaad8941b664ce00b8c1f35f2ade5cb25408305789e504cbfbdc1dc51c",
+          "02204905e4a7c53e1d9251e69a77a2ecdd055ad07e69d373c0d5a9414a2e0b3e",
+          "4a14a106af4647319e6ee33fe0011db9ad87533a68b53fb257e770c573227183",
+          "0cf538ff76353327220c3f6a9a37d3351a35f1c2fcb6f6de4b0853e20eed0f14",
+          "dccbf691e356b3483c1e1519162520c61bcd13578f12a08c5a8ccc2587f4ab52",
+          "3c5c1e4d2a372a26707b75c6fefa7d6b60343c1bd3f96dba8b2860595df68f04",
+          "e4029951bdf561e72f7dcd95439a904ced993cc2272faeab0c4b62396149a9e7",
+          "71e53cb87d9e68274cc89f58c8118e195e9a0645c2a0836f320ca431e1956377",
+          "b024d826ae9c3e7c2dd055b347c8c419c236546efa1b99d3b42f2e7ee42a090c",
+          "9987145b5ee8f3259e6fe8611b4708c260d56922604cb4fa7795ce922ecf87e8",
+          "c012e898738486334e73a2f3b040b69e66f6c9b6a1082e482a5aaaed022a01cb"
+        ],
+        "version": "20000000",
+        "nbits": "17023cc1",
+        "ntime": "6a90ac4c",
+        "clean_jobs": false,
+        "coinbase_printable": ".........................................V.....Mined by AntPool ..d...<,..mm.H/.......O.kR...E.7...N.-<b.................\"..........B@*(.a.q.K'.r.y.[...............RI...1.9.....................&j$.!.... j&.....B...dV.Cv.%%..!..H[.........../j-CORE.)SU..... .......=..7N>..,....KT..2+....0.........j.E"
+      },
+      {
+        "captured_at": 1787866218.68483,
+        "job_id": "3776299",
+        "prev_hash": "0982b4a52b8e71ac24b70ffa854e4e3469f16e550000827b0000000000000000",
+        "coinbase1": "01000000010000000000000000000000000000000000000000000000000000000000000000ffffffff560305b70e194d696e656420627920416e74506f6f6c2015006407011612f6fabe6d6db30e5dcb11d2231739af3bfd2a22b1d126ccf29352af65f6ccf662ebac1ff5af1000000000000000",
+        "coinbase2": "ffffffff07220200000000000017a91442402a28dd61f2718a4b27ae72a4791d5bbdade7875971c1120000000017a9145249bdf2c131d43995cff42e8feee293f79297a8870000000000000000266a24aa21a9ed091b10a9d61a1dee5dc15bae9bbd29749d9d32c55233033b1ca772d5574635f100000000000000002f6a2d434f5245012953559db5cc88ab20b1960faa9793803d0703374e3ecda72cb7961caa4b541b1e322bcfe0b5a0300000000000000000146a12455853415401000d130f0e0e0b041f1200130000000000000000296a27737973f565bd01d51d04432d2c173557e29bb07016790114d61dc6dca1e93a6ea7119c7012230000000000000000002b6a2952534b424c4f434b3ac7e473b21d68aa176770fc30b00046a8b957218278a1c00b353dd81d008c358700000000",
+        "merkle_branches": [
+          "c27b2a06c09031aeebce41701eb2e52aba1674a726eba187c254d02ac66974ec",
+          "15d06d835792134991074a3ea30ed3c95a64a36cbc96695a8ca27b84426a0972",
+          "b186dddaad8941b664ce00b8c1f35f2ade5cb25408305789e504cbfbdc1dc51c",
+          "02204905e4a7c53e1d9251e69a77a2ecdd055ad07e69d373c0d5a9414a2e0b3e",
+          "99d7856928db069148489a8f44d4bc7c1eb6bc38c9d7bbf77053131e21946899",
+          "4bdda2a0bdc7a3ddddd7bf35bde319b827ec531781ad6a87f0f446ccb5c4ee84",
+          "4a3e0d41ea9e00a76d9c2577f4101a4510c411fcd7fb2380d3c7ab6f01d52ffd",
+          "c45b0a745456a6c64f30354f2ba19a5cb464980c836d8a7b0b513baf1bbdedcf",
+          "4c2aba8356ccd301f8557671af81bec8fcbf620a8cee5de05c7b266b6af3500e",
+          "888e0f0981b64a039acb4c863750ff06e16438e283320d644b68ba3ab34aaaae",
+          "c981c656a145b3b74b2027559eb05de4e69d587d47242ba67853a3d4c9a1d539",
+          "2ec9e192903cabf0a1e72a5bcad0d299a690bb74ad12eab4d04a17d7483280d2",
+          "92ae921acaf252244bb48c41a0e19e5fd88b9a86be28083049e4ee4aea14b60c"
+        ],
+        "version": "20000000",
+        "nbits": "17023cc1",
+        "ntime": "6a90ac6a",
+        "clean_jobs": false,
+        "coinbase_printable": ".........................................V.....Mined by AntPool ..d.......mm..]...#.9.;.*\"..&...R.e...b..................\"..........B@*(.a.q.K'.r.y.[....Yq.........RI...1.9.....................&j$.!..........].[...)t..2.R3.;..r.WF5........./j-CORE.)SU..... .......=..7N>..,....KT..2+....0.........j.E"
+      },
+      {
+        "captured_at": 1787866248.8348224,
+        "job_id": "3776301",
+        "prev_hash": "0982b4a52b8e71ac24b70ffa854e4e3469f16e550000827b0000000000000000",
+        "coinbase1": "01000000010000000000000000000000000000000000000000000000000000000000000000ffffffff560305b70e194d696e656420627920416e74506f6f6c201500640701441aadfabe6d6dd151fc2dedde3c640be6b3e00bd7463c628ac794e504c4c8a04b4b1ecab763e61000000000000000",
+        "coinbase2": "ffffffff07220200000000000017a91442402a28dd61f2718a4b27ae72a4791d5bbdade787ac5bc2120000000017a9145249bdf2c131d43995cff42e8feee293f79297a8870000000000000000266a24aa21a9edb5ac63838a09cb50620cbd7446c8e8f4ef8eff0d2ceed6fb78a5a42164b471a200000000000000002f6a2d434f5245012953559db5cc88ab20b1960faa9793803d0703374e3ecda72cb7961caa4b541b1e322bcfe0b5a0300000000000000000146a12455853415401000d130f0e0e0b041f1200130000000000000000296a27737973f565bd01d51d04432d2c173557e29bb07016790114d61dc6dca1e93a6ea7119c7012230000000000000000002b6a2952534b424c4f434b3a20ff7a06875a324b23832e81341a83b855300a1578a1c00b353dd81e008c358900000000",
+        "merkle_branches": [
+          "d703f2a1b7d80349ac73f00a995da1b6fb2062fbd7eeaa3b96025df4769998f3",
+          "15d06d835792134991074a3ea30ed3c95a64a36cbc96695a8ca27b84426a0972",
+          "b186dddaad8941b664ce00b8c1f35f2ade5cb25408305789e504cbfbdc1dc51c",
+          "02204905e4a7c53e1d9251e69a77a2ecdd055ad07e69d373c0d5a9414a2e0b3e",
+          "99d7856928db069148489a8f44d4bc7c1eb6bc38c9d7bbf77053131e21946899",
+          "4bdda2a0bdc7a3ddddd7bf35bde319b827ec531781ad6a87f0f446ccb5c4ee84",
+          "f399d5690ab46aa2991f1b355e0e668ee35bb34a0f6cec27fb93d0e54eda5eb4",
+          "090a373429dbafa46867cef9ece8da5167e96c9ced99551f4c11e7ee45cf08a6",
+          "5e3349436778cde2ead512e25a17c0c5d8a2cf2da0000c276a1c297fe81dedaa",
+          "a01ee8bfa5811822519efdcb46dd35200a6f7a2bbf810464922db2dfba4398bf",
+          "e8aa59dfdc9059a303ab61bad27d449555ac9a8acfc57dd4c65760a27e79de53",
+          "8117d840dc9ea567663c967b6f3cf6828245c124f732143cd06b898c9674837e",
+          "d40f8260cf35f69f7a96400ce6c3f6c10c2f9bc28c60b2dedf7dd70842edc34c"
+        ],
+        "version": "20000000",
+        "nbits": "17023cc1",
+        "ntime": "6a90ac88",
+        "clean_jobs": false,
+        "coinbase_printable": ".........................................V.....Mined by AntPool ..d..D....mm.Q.-..<d......F<b........KK...c..............\"..........B@*(.a.q.K'.r.y.[.....[.........RI...1.9.....................&j$.!....c....Pb..tF.......,...x..!d.q........./j-CORE.)SU..... .......=..7N>..,....KT..2+....0.........j.E"
+      },
+      {
+        "captured_at": 1787866279.0741706,
+        "job_id": "3776303",
+        "prev_hash": "0982b4a52b8e71ac24b70ffa854e4e3469f16e550000827b0000000000000000",
+        "coinbase1": "01000000010000000000000000000000000000000000000000000000000000000000000000ffffffff560305b70e194d696e656420627920416e74506f6f6c2015006407017236cffabe6d6df310938383138b3af76bea517c4dbe44eed931846959a919419675aef6b15cdc1000000000000000",
+        "coinbase2": "ffffffff07220200000000000017a91442402a28dd61f2718a4b27ae72a4791d5bbdade787fadcc2120000000017a9145249bdf2c131d43995cff42e8feee293f79297a8870000000000000000266a24aa21a9ed1c7a009347c309ea9bd9f9392e18ac609ec0f75705d79dbbca8cbc46212e76d700000000000000002f6a2d434f5245012953559db5cc88ab20b1960faa9793803d0703374e3ecda72cb7961caa4b541b1e322bcfe0b5a0300000000000000000146a12455853415401000d130f0e0e0b041f1200130000000000000000296a27737973f565bd01d51d04432d2c173557e29bb07016790114d61dc6dca1e93a6ea7119c7012230000000000000000002b6a2952534b424c4f434b3a75b92ba21909a59c0304a2f7037b58e33c04226678a1c00b353dd820008c358b00000000",
+        "merkle_branches": [
+          "1944bb3aa3422d016f1e4ac4e1039ad870020a4ba86e031f1619b6853315ead5",
+          "15d06d835792134991074a3ea30ed3c95a64a36cbc96695a8ca27b84426a0972",
+          "b186dddaad8941b664ce00b8c1f35f2ade5cb25408305789e504cbfbdc1dc51c",
+          "02204905e4a7c53e1d9251e69a77a2ecdd055ad07e69d373c0d5a9414a2e0b3e",
+          "8d887fe113b2d63c024d6ccdc3a5f4cabea68004d49832aed0d9ce034f2a1b2f",
+          "a5f5445d41b7622933121f8874b8743f3b6dac6b712ce431242d6198a57c53b7",
+          "a55a801157c157be1d049c8f78d6ef6040c3fa63f2139c875a89d9abf8da1c91",
+          "77eb31f93da92cbd07100fe3a16b45600cff68f6612ba599a5e1ebf78cd165ae",
+          "c0e070061fd2a66b7bb3b94f1bf067addea50622206bee2c867ec99412681368",
+          "14aba3dfe35c28e78a445aaae1b04dc3a069ca7d1795801fc2a8f349126851d1",
+          "77c5c4933742a58f87186f33c4d3d7cc3503e4c144026cb245fcf52f0c1e2f02",
+          "a369d3ef03e5ab3348fa678d24a3c5b94a71205886b1971ad1b1ed1b1d84ffe2",
+          "b7d58538cee1866445e2cf1959e78b6c177667fbbb35d817c5a9722d9e48590e"
+        ],
+        "version": "20000000",
+        "nbits": "17023cc1",
+        "ntime": "6a90aca6",
+        "clean_jobs": false,
+        "coinbase_printable": ".........................................V.....Mined by AntPool ..d..r6...mm.......:.k.Q|M.D..1.iY..A.u...\\..............\"..........B@*(.a.q.K'.r.y.[...............RI...1.9.....................&j$.!...z..G......9...`...W.......F!.v........./j-CORE.)SU..... .......=..7N>..,....KT..2+....0.........j.E"
+      },
+      {
+        "captured_at": 1787866309.1157875,
+        "job_id": "3776306",
+        "prev_hash": "0982b4a52b8e71ac24b70ffa854e4e3469f16e550000827b0000000000000000",
+        "coinbase1": "01000000010000000000000000000000000000000000000000000000000000000000000000ffffffff560305b70e194d696e656420627920416e74506f6f6c201500640701a00f69fabe6d6dd4c7efa191f8d1c87c6b7756a8082fbca8468c500685830ab53a7b9ea7321b691000000000000000",
+        "coinbase2": "ffffffff07220200000000000017a91442402a28dd61f2718a4b27ae72a4791d5bbdade7877a01c4120000000017a9145249bdf2c131d43995cff42e8feee293f79297a8870000000000000000266a24aa21a9eda000e5620f7e987c374688d35f564fee9c9f75536e054853a5c03ecc0bdba53100000000000000002f6a2d434f5245012953559db5cc88ab20b1960faa9793803d0703374e3ecda72cb7961caa4b541b1e322bcfe0b5a0300000000000000000146a12455853415401000d130f0e0e0b041f1200130000000000000000296a27737973f565bd01d51d04432d2c173557e29bb07016790114d61dc6dca1e93a6ea7119c7012230000000000000000002b6a2952534b424c4f434b3a24ec2efca6bda79a64c16ebc2cfb7a8be608f51b78a1c00b353dd81d008c358c00000000",
+        "merkle_branches": [
+          "19e69d216a0c52ed3bd26c68f550b2f3d64b788f991f701fdfdf5e1cb3976a7e",
+          "15d06d835792134991074a3ea30ed3c95a64a36cbc96695a8ca27b84426a0972",
+          "b186dddaad8941b664ce00b8c1f35f2ade5cb25408305789e504cbfbdc1dc51c",
+          "02204905e4a7c53e1d9251e69a77a2ecdd055ad07e69d373c0d5a9414a2e0b3e",
+          "8d887fe113b2d63c024d6ccdc3a5f4cabea68004d49832aed0d9ce034f2a1b2f",
+          "a936d2995d29e1a6ccaefea75c21aed64278ff52eae232c4349ace75ec7732a4",
+          "c52c2f9208b17a72595db914dd9384c1cd70ca851ed78d17afbd35af49f5984a",
+          "019a8a31a6ffee5013f9371460a39cc4adb72682dbeafa6df5fd127f8b126017",
+          "d5092d5f017b803b8c6e0b9f27766a456527eac7dbd114b7ae07a78aced66442",
+          "b99921dffbc87f3efa2ad908c514a49d77519eb38144ce3161d137f2c904783c",
+          "e136c51f4c0a6f5f6c62e9057fdb05fc423ef8291003a7dfba325f9a34908ab8",
+          "324c840d538e3cdc93e5e8308d1c1a72d641eef4dcf2623068b0a1524f259c99",
+          "49ce7a2228411ebd3dca65cf54166c3f1afc49d50f585d9b49249f44944c372c"
+        ],
+        "version": "20000000",
+        "nbits": "17023cc1",
+        "ntime": "6a90acc4",
+        "clean_jobs": false,
+        "coinbase_printable": ".........................................V.....Mined by AntPool ..d....i..mm........|kwV../..F.P.....:{..2.i.............\"..........B@*(.a.q.K'.r.y.[....z..........RI...1.9.....................&j$.!.....b.~.|7F.._VO...uSn.HS..>....1......../j-CORE.)SU..... .......=..7N>..,....KT..2+....0.........j.E"
+      },
+      {
+        "captured_at": 1787866339.2170968,
+        "job_id": "3776312",
+        "prev_hash": "0982b4a52b8e71ac24b70ffa854e4e3469f16e550000827b0000000000000000",
+        "coinbase1": "01000000010000000000000000000000000000000000000000000000000000000000000000ffffffff560305b70e194d696e656420627920416e74506f6f6c201500640701cdfcdefabe6d6d554b4bd5d5e5f6dce9c596738f3c2dfd0f072521db9c9ca8eb947bb79701270d1000000000000000",
+        "coinbase2": "ffffffff07220200000000000017a91442402a28dd61f2718a4b27ae72a4791d5bbdade787b7a8c4120000000017a9145249bdf2c131d43995cff42e8feee293f79297a8870000000000000000266a24aa21a9ed27235a8d53dbb3c4a03ac774c21a3145eb2377acbaa9b78fab144a37c010a2c800000000000000002f6a2d434f5245012953559db5cc88ab20b1960faa9793803d0703374e3ecda72cb7961caa4b541b1e322bcfe0b5a0300000000000000000146a12455853415401000d130f0e0e0b041f1200130000000000000000296a27737973f565bd01d51d04432d2c173557e29bb07016790114d61dc6dca1e93a6ea7119c7012230000000000000000002b6a2952534b424c4f434b3af5f60d9f9418404297dda8d9c5483b3578304eb378a1c00b353dd81c008c358d00000000",
+        "merkle_branches": [
+          "07e85b4830852068c541b4f1e3be6ed1f518bc711364001d80ec97320da60215",
+          "15d06d835792134991074a3ea30ed3c95a64a36cbc96695a8ca27b84426a0972",
+          "b186dddaad8941b664ce00b8c1f35f2ade5cb25408305789e504cbfbdc1dc51c",
+          "02204905e4a7c53e1d9251e69a77a2ecdd055ad07e69d373c0d5a9414a2e0b3e",
+          "8d887fe113b2d63c024d6ccdc3a5f4cabea68004d49832aed0d9ce034f2a1b2f",
+          "a46a3f549a35f027d9efa9519684af25607177477e54f9cc50654ca4540f1301",
+          "fd688863151b894cff3626cb723a03076aad521f6be496be85d1666df751203f",
+          "254c51210599272758f04d9985577ee450814a35ce5a88c253d006de8565c183",
+          "8dfd3b4fd04df7210fa40fc36cf73122d83f77efe410e3436f273e6458066f89",
+          "0fc0bf3f81a1fadd60c6a4393e4eb825dd8579efe4a09bbf4b5f249138752a6c",
+          "606b696cf945435ee28a593d45f69a87bc89ca51ce6c307240b443e823cf74b5",
+          "fdb4dc0196c1200be92767619f820283fe37f9bf9848379ca8ec8208e27815ca",
+          "156132575e7895b1e45c9deecedd31fa4f5992bb5e87719bdee84258855566c5"
+        ],
+        "version": "20000000",
+        "nbits": "17023cc1",
+        "ntime": "6a90ace3",
+        "clean_jobs": false,
+        "coinbase_printable": ".........................................V.....Mined by AntPool ..d.......mmUKK........s.<-...%!......{...'..............\"..........B@*(.a.q.K'.r.y.[...............RI...1.9.....................&j$.!..'#Z.S....:.t..1E.#w.......J7............/j-CORE.)SU..... .......=..7N>..,....KT..2+....0.........j.E"
+      },
+      {
+        "captured_at": 1787866369.4500692,
+        "job_id": "3776315",
+        "prev_hash": "0982b4a52b8e71ac24b70ffa854e4e3469f16e550000827b0000000000000000",
+        "coinbase1": "01000000010000000000000000000000000000000000000000000000000000000000000000ffffffff560305b70e194d696e656420627920416e74506f6f6c201500640701fc2041fabe6d6dc75c94dd9eb46a5e1b5e957d68363b8c8371c1bae65af206be721b99def960e91000000000000000",
+        "coinbase2": "ffffffff07220200000000000017a91442402a28dd61f2718a4b27ae72a4791d5bbdade78726dbc5120000000017a9145249bdf2c131d43995cff42e8feee293f79297a8870000000000000000266a24aa21a9ed1435ae54054f959f7ead4593e986f4863a1cce87f9e658083dc3495e62353d8700000000000000002f6a2d434f5245012953559db5cc88ab20b1960faa9793803d0703374e3ecda72cb7961caa4b541b1e322bcfe0b5a0300000000000000000146a12455853415401000d130f0e0e0b041f1200130000000000000000296a27737973f565bd01d51d04432d2c173557e29bb07016790114d61dc6dca1e93a6ea7119c7012230000000000000000002b6a2952534b424c4f434b3a9d9baea84dbfde01097996acde2a12abbbc0d73578a1c00b353dd821008c358f00000000",
+        "merkle_branches": [
+          "05c5b81d1bdd0daf23a8108f9bf0d9d78d39bb538837885337033edc1c25e01a",
+          "15d06d835792134991074a3ea30ed3c95a64a36cbc96695a8ca27b84426a0972",
+          "b186dddaad8941b664ce00b8c1f35f2ade5cb25408305789e504cbfbdc1dc51c",
+          "02204905e4a7c53e1d9251e69a77a2ecdd055ad07e69d373c0d5a9414a2e0b3e",
+          "41ce121ce10d44a097fb11428bdaf60c33090b5f1a22877af4722f25eedecc01",
+          "c92ce56dacd644cac970ef03b4c5be2498f14ffc2101ed56880bc16271db24cd",
+          "1ca46f0dca4e0a88aebf4d8bd773dcb0c6dd5664768fb6ce9be1e3cf4d695adb",
+          "1f089539d4d4b1e6aea98f2e70e409450af6dc7d000da060c8fcdf8be3790acf",
+          "2536339aa8b5941d4883924e24fd8ee93b2939cc18292fa71fa72fbb78f50b23",
+          "cd94c24fa90ce30a3ddf28fa5afeb2ea97fc10a3eb3ef04599e33942cfe2f83f",
+          "70ec5d00b96ff10dcab70d29022bd5cffcf611dfbb6658e4467524dc6dda246c",
+          "300292b05fdab7add38c16c754b0123a5ed33d94c5e65757416529d9f4825091",
+          "f0595d154f1f1f57ec38003a4c1455b02c8f79c72e9dac6b61253207ee14bd48"
+        ],
+        "version": "20000000",
+        "nbits": "17023cc1",
+        "ntime": "6a90ad01",
+        "clean_jobs": false,
+        "coinbase_printable": ".........................................V.....Mined by AntPool ..d... A..mm.\\....j^.^.}h6;..q...Z...r....`..............\"..........B@*(.a.q.K'.r.y.[....&..........RI...1.9.....................&j$.!...5.T.O..~.E.....:.....X.=.I^b5=........./j-CORE.)SU..... .......=..7N>..,....KT..2+....0.........j.E"
+      }
+    ]
+  }
+}
