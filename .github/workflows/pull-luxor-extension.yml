@@ -1,1 +1,29 @@
-sed: can't read pull-luxor-extension.yml: No such file or directory
+name: Pull Luxor backtest extension
+
+on:
+  push:
+    branches: [antpool-friends-audit]
+    paths:
+      - pull_luxor_extension.py
+      - .github/workflows/pull-luxor-extension.yml
+  workflow_dispatch:
+
+jobs:
+  pull:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Pull public data
+        run: python3 pull_luxor_extension.py
+      - name: Commit extension data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add results/luxor_extension_2026-08-15_to_2026-09-01.json
+          git diff --cached --quiet && exit 0
+          git commit -m "Record Luxor backtest extension through 2026-09-01"
+          git push
